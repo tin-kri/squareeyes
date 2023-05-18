@@ -1,0 +1,57 @@
+body {
+    background-color: #F9F9F9;
+    color: #373736;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: left;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h3 {
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+}
+
+input.search {
+    width: 260px;
+    border: 1px solid #131313;
+    display: block;
+    padding: 9px 4px 9px 40px;
+    background: transparent url("../Images/search.256x256.png") no-repeat 1px;
+    background-size: contain;
+}
+
+.button-sign-up {
+    background-color: #70158F;
+    color: #F9F9F9;
+}
+
+.button-sign-in {
+    background-color: #F9F9F9;
+    color: #373736;
+    border-color: #70158F;
+}
+
+.search {
+    background-color: #F9F9F9;
+    color: #919191;
+}
+
+.intro {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.04rem;
+}
+
+H1 {
+    font-size: 3rem;
+}
