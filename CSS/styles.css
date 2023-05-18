@@ -1,32 +1,29 @@
+header {
+    text-align: left;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
 body {
     background-color: #F9F9F9;
     color: #373736;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-header {
-    text-align: left;
-    font-family: 'Bebas Neue', sans-serif;
+h1 {
+    font-size: 3rem;
 }
 
 h3 {
     text-align: center;
 }
 
-li {
-    display: inline-block;
+.header-nav {
+    font-size: 1.25em;
+    font-family: 'Bebas Neue', sans-serif;
+
 }
 
-input.search {
-    width: 260px;
-    border: 1px solid #131313;
-    display: block;
-    padding: 9px 4px 9px 40px;
-    background: transparent url("../Images/search.256x256.png") no-repeat 1px;
-    background-size: contain;
+li {
+    display: inline-block;
 }
 
 .button-sign-up {
@@ -45,6 +42,15 @@ input.search {
     color: #919191;
 }
 
+input.search {
+    width: 260px;
+    border: 1px solid #131313;
+    display: block;
+    padding: 9px 4px 9px 40px;
+    background: transparent url("../Images/search.256x256.png") no-repeat 1px;
+    background-size: contain;
+}
+
 .intro {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -52,12 +58,12 @@ input.search {
     letter-spacing: 0.04rem;
 }
 
-h1 {
+.cta-button {
+    background-color: #70158F;
+    color: #F9F9F9;
     font-size: 3rem;
 }
 
-.header-nav {
-    font-size: 1.25em;
+button {
     font-family: 'Bebas Neue', sans-serif;
-
 }
