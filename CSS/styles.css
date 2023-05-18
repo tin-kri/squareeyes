@@ -52,6 +52,12 @@ input.search {
     letter-spacing: 0.04rem;
 }
 
-H1 {
+h1 {
     font-size: 3rem;
+}
+
+.header-nav {
+    font-size: 1.25em;
+    font-family: 'Bebas Neue', sans-serif;
+
 }
