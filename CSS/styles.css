@@ -62,8 +62,6 @@ input.search {
     background-color: #70158F;
     color: #F9F9F9;
     font-size: 3rem;
-}
-
-button {
     font-family: 'Bebas Neue', sans-serif;
-}
+    padding: 10px;
+    text-decoration: none;
