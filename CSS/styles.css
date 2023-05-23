@@ -1,6 +1,36 @@
 header {
     text-align: left;
     font-family: 'Bebas Neue', sans-serif;
+    position: relative;
+}
+
+.fas {
+    color: #373736;
+}
+
+nav,
+#menu-checkbox {
+    display: none;
+}
+
+#menu-checkbox:checked~nav {
+    display: block;
+}
+
+nav {
+    position: absolute;
+    background-color: #F9F9F9;
+}
+
+nav a {
+    display: block;
+    padding: 1rem 5rem;
+}
+
+@media (min-width: 600px) {
+    nav {
+        display: block;
+    }
 }
 
 body {
@@ -65,3 +95,4 @@ input.search {
     font-family: 'Bebas Neue', sans-serif;
     padding: 10px;
     text-decoration: none;
+}
