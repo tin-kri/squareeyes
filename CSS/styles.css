@@ -30,7 +30,9 @@ nav a {
 @media (min-width: 600px) {
     nav {
         display: block;
+        color: #70158F;
     }
+
 }
 
 body {
