@@ -1,5 +1,14 @@
-header {
-    text-align: left;
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header-container2 {
+    display: flex;
+}
+
+.header-container {
+    text-align: right;
     font-family: 'Bebas Neue', sans-serif;
     position: relative;
 }
@@ -30,9 +39,20 @@ nav a {
 @media (min-width: 600px) {
     nav {
         display: block;
-        color: #70158F;
+        position: static;
     }
 
+    .hamburger-icon {
+        display: none;
+    }
+
+    nav a {
+        display: inline-block;
+    }
+}
+
+.logo {
+    max-width: 200px;
 }
 
 body {
@@ -52,10 +72,6 @@ h3 {
     font-size: 1.25em;
     font-family: 'Bebas Neue', sans-serif;
 
-}
-
-li {
-    display: inline-block;
 }
 
 .button-sign-up {
@@ -83,6 +99,21 @@ input.search {
     background-size: contain;
 }
 
+.container-movies-frontpage {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.container-movies-frontpage img {
+    min-width: 100px;
+    max-width: 300px;
+    object-fit: cover;
+}
+
+
+
 .intro {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -90,11 +121,18 @@ input.search {
     letter-spacing: 0.04rem;
 }
 
+.cta-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 .cta-button {
     background-color: #70158F;
     color: #F9F9F9;
-    font-size: 3rem;
+    font-size: (3rem);
     font-family: 'Bebas Neue', sans-serif;
     padding: 10px;
     text-decoration: none;
+
 }
