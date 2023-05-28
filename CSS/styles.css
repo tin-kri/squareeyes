@@ -1,21 +1,26 @@
-.header {
-    display: flex;
-    align-items: center;
+.logo {
+    max-width: 300px;
 }
 
-.header-container2 {
+.flex-container {
     display: flex;
-}
-
-.header-container {
-    text-align: right;
+    flex-wrap: wrap;
     font-family: 'Bebas Neue', sans-serif;
-    position: relative;
+
+
+
 }
+
+/* .flex-container>* {
+    outline: solid 2px #70158F;
+} */
+
+
 
 .fas {
     color: #373736;
 }
+
 
 nav,
 #menu-checkbox {
@@ -51,9 +56,6 @@ nav a {
     }
 }
 
-.logo {
-    max-width: 200px;
-}
 
 body {
     background-color: #F9F9F9;
@@ -84,18 +86,25 @@ p {
 .header-nav {
     font-size: 1.25em;
     font-family: 'Bebas Neue', sans-serif;
+    text-transform: capitalize;
+}
 
+
+.cart-img {
+    width: 15%;
 }
 
 .button-sign-up {
     background-color: #70158F;
     color: #F9F9F9;
+    text-transform: capitalize;
 }
 
 .button-sign-in {
     background-color: #F9F9F9;
     color: #373736;
     border-color: #70158F;
+    text-transform: capitalize;
 }
 
 .search {
@@ -104,13 +113,15 @@ p {
 }
 
 input.search {
-    width: 260px;
+    width: 15%;
     border: 1px solid #131313;
     display: block;
     padding: 9px 4px 9px 40px;
     background: transparent url("../Images/search.256x256.png") no-repeat 1px;
     background-size: contain;
 }
+
+/* body not the sq header from here */
 
 .container-movies-frontpage {
     display: flex;
@@ -221,3 +232,5 @@ textarea {
     border: #70158F;
     width: 300px;
 }
+
+*/
