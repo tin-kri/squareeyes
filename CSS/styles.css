@@ -211,6 +211,12 @@ input.search {
     text-align: center;
 }
 
+.summary-title {
+    background-color: #0E8F59;
+    padding: 2% 2% 1%;
+    text-align: center;
+}
+
 /* contact us */
 .contact-paragraph-container {
     display: flex;
