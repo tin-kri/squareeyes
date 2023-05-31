@@ -99,6 +99,7 @@ h6 {
 
 p {
     font-size: 1rem;
+
 }
 
 h4,
@@ -115,6 +116,7 @@ p {
 
 .text-trailer {
     color: #7e7d7d;
+    font-weight: lighter;
 }
 
 
