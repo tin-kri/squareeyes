@@ -89,13 +89,35 @@ h4 {
 
 }
 
-h5 {}
+h5 {
+    font-size: 1rem;
+}
 
-h6 {}
+h6 {
+    font-size: .75rem;
+}
 
 p {
-    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
 }
+
+h4,
+h5,
+h6,
+p {
+    font-family: 'Inter', sans-serif;
+    color: #373736;
+}
+
+.contry-year {
+    font-weight: lighter;
+}
+
+.text-trailer {
+    color: #7e7d7d;
+}
+
+
 
 .header-nav {
     font-size: 1.25em;
