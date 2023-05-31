@@ -277,3 +277,14 @@ textarea {
     border: #70158F;
     width: 300px;
 }
+
+.payment-button {
+    background-color: #074229;
+    color: #F9F9F9;
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.1rem;
+    border: #70158F;
+    width: 500px;
+    height: 80px;
+}
