@@ -1,0 +1,59 @@
+body {
+    background-color: #F9F9F9;
+    color: #373736;
+    font-family: 'Inter', sans-serif;
+}
+
+.fas {
+    color: #373736;
+}
+
+header {
+    margin: 0px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.header-nav {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.cart {
+    max-width: 50px;
+}
+
+.logo {
+    min-width: 20%;
+    max-width: 30%;
+
+}
+
+.button-sign-in {
+    background-color: #F9F9F9;
+    color: #373736;
+    outline: 0.1rem solid #70158F;
+    font-family: inherit;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 1em 1.5em;
+    text-decoration: none;
+}
+
+.button-sign-up {
+    background-color: #70158F;
+    color: #F9F9F9;
+    font-family: inherit;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 1.1em 1.5em;
+    text-decoration: none;
+}

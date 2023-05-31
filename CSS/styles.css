@@ -63,10 +63,6 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
-}
-
-h2 {
     font-family: 'Bebas Neue', sans-serif;
     text-transform: uppercase;
     color: #F9F9F9;
@@ -75,9 +71,27 @@ h2 {
     font-weight: 400;
 }
 
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    color: #DBAA37;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
 h3 {
     text-align: center;
 }
+
+h4 {
+    font-size: 3rem;
+
+}
+
+h5 {}
+
+h6 {}
 
 p {
     font-family: 'Inter', sans-serif;
@@ -160,13 +174,15 @@ input.search {
 
 }
 
-/* contact us */
-.contact {
+
+.page-title {
     background-color: #dbaa37;
     padding: 2% 2% 1%;
     text-align: center;
+
 }
 
+/* contact us */
 .contact-paragraph-container {
     display: flex;
     flex-direction: column;
@@ -232,5 +248,3 @@ textarea {
     border: #70158F;
     width: 300px;
 }
-
-*/
