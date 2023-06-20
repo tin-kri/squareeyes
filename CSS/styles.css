@@ -1,16 +1,20 @@
 header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     font-family: 'Bebas Neue', sans-serif;
     text-transform: capitalize;
     font-size: 1.25em;
-    letter-spacing: 1.px;
+    letter-spacing: 1.2px;
+    margin: 20px;
 
 
 }
 
+
 .logo {
     max-width: 200px;
+
 }
 
 .cart-icon {
@@ -36,6 +40,13 @@ header {
 
 }
 
+.sign-up:hover {
+    background-color: #71158fb4;
+}
+
+.log-in:hover {
+    background-color: #e6e5e5;
+}
 
 input.search {
     max-height: 35px;
@@ -185,10 +196,11 @@ p {
 .cta-button {
     background-color: #70158F;
     color: #F9F9F9;
-    font-size: (3rem);
+    font-size: 2rem;
     font-family: 'Bebas Neue', sans-serif;
     padding: 10px;
     text-decoration: none;
+    letter-spacing: 2px;
 
 }
 
