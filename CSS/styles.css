@@ -100,6 +100,7 @@ nav a {
 }
 
 
+
 body {
     background-color: #F9F9F9;
     color: #373736;
@@ -109,7 +110,7 @@ h1 {
     font-family: 'Bebas Neue', sans-serif;
     text-transform: uppercase;
     color: #F9F9F9;
-    font-size: 2rem;
+    font-size: 3rem;
     letter-spacing: 2px;
     font-weight: 400;
 }
@@ -118,7 +119,7 @@ h2 {
     font-family: 'Bebas Neue', sans-serif;
     text-transform: uppercase;
     color: #DBAA37;
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 2px;
     font-weight: 400;
 }
@@ -152,7 +153,7 @@ p {
     color: #373736;
 }
 
-.contry-year {
+.horror .contry-year {
     font-weight: lighter;
 }
 
@@ -161,6 +162,46 @@ p {
     font-weight: lighter;
 }
 
+.genre-horror,
+.genre-lifestories,
+.genre-musicdoc {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin: 2%;
+    padding: 5%;
+}
+
+.genre-horror img,
+.genre-lifestories img,
+.genre-musicdoc img {
+    object-fit: cover;
+    height: 220px;
+    width: 170px;
+    object-position: center;
+}
+
+.genre h2 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+@media (max-width: 1260px) {
+
+    .genre-horror,
+    .genre-lifestories,
+    .genre-musicdoc {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 630px) {
+
+    .genre-horror,
+    .genre-lifestories,
+    .genre-musicdoc {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 
 
