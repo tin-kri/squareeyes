@@ -120,7 +120,11 @@ h2 {
 }
 
 h3 {
-    text-align: center;
+    /* text-align: center; */
+    font-family: Inter, sans-serif;
+    ;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 h4 {
@@ -165,6 +169,7 @@ p {
     gap: 10px;
     margin: 2%;
     padding-bottom: 5%;
+    position: relative;
 }
 
 .genre-horror img,
@@ -179,6 +184,19 @@ p {
 .genre {
     font-family: 'Bebas Neue', sans-serif;
     color: #373736;
+}
+
+.movie-info {
+
+    position: absolute;
+    background: linear-gradient(60deg, rgba(69, 0, 106, 0.606) 0%, rgba(61, 0, 75, 0.577) 50%, rgba(34, 0, 34, 0.751));
+    color: #F9F9F9;
+    bottom: 70px;
+    overflow-wrap: break-word;
+
+
+
+
 }
 
 @media (max-width: 1260px) {
