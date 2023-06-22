@@ -7,14 +7,11 @@ header {
     font-size: 1.25em;
     letter-spacing: 1.2px;
     margin: 20px;
-
-
 }
 
 
 .logo {
     max-width: 200px;
-
 }
 
 .cart-icon {
@@ -59,11 +56,9 @@ input.search {
 }
 
 
-
 .fas {
     color: #373736;
 }
-
 
 nav,
 #menu-checkbox {
@@ -169,7 +164,7 @@ p {
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
     margin: 2%;
-    padding: 5%;
+    padding-bottom: 5%;
 }
 
 .genre-horror img,
@@ -181,8 +176,9 @@ p {
     object-position: center;
 }
 
-.genre h2 {
+.genre {
     font-family: 'Bebas Neue', sans-serif;
+    color: #373736;
 }
 
 @media (max-width: 1260px) {
@@ -200,6 +196,10 @@ p {
     .genre-lifestories,
     .genre-musicdoc {
         grid-template-columns: repeat(2, 1fr);
+
+        .genre {
+            text-align: center;
+        }
     }
 }
 
@@ -246,10 +246,16 @@ p {
 }
 
 
+
 .page-title {
     background-color: #dbaa37;
     padding: 2% 2% 1%;
     text-align: center;
+
+}
+
+.content {
+    background-color: #70158F;
 
 }
 
