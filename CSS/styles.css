@@ -197,9 +197,11 @@ p {
     .genre-musicdoc {
         grid-template-columns: repeat(2, 1fr);
 
-        .genre {
-            text-align: center;
-        }
+
+    }
+
+    .genre {
+        text-align: center;
     }
 }
 
@@ -216,7 +218,8 @@ p {
 
 .container-movies-frontpage img {
     min-width: 100px;
-    max-width: 300px;
+    max-width: 400px;
+    max-height: 300px;
     object-fit: cover;
 }
 
