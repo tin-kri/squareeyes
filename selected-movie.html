@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SquareEyes</title>
-    <meta name="description" content="">
+    <title>SquareEyes - Colorful Murakami</title>
+    <meta name="Colorful Murakami"
+        content="Discover the life and work of legendary author Haruki Murakami in this captivating documentary.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -21,35 +22,56 @@
 
 <body>
     <header>
+        <figure>
+            <img class="logo" src="Images/squareeyeslogo-nobackground.png" alt="SquareEyes Logo">
+        </figure>
 
+        <input type="checkbox" name="header" id="menu-checkbox">
+        <label for="menu-checkbox" class="hamburger-icon"> <i class="fas fa-bars"></i></label>
+        <div class="navigation-wrap">
+            <nav class="nav-menu">
+                <a href="explore.html">explore content</a>
+                <a href="contact.html">contact us</a>
+            </nav>
+            <nav class="nav-head">
+                <a href="cart.html"><img src="Images/simple-cart.256x230.png" class="cart-icon"
+                        alt="Shopping cart icon"></a>
+                <a href="#" class="sign-up">Sign up</a>
+                <a href="#" class="log-in">Log in</a>
+                <input class="search" type="search" placeholder="Search">
+            </nav>
+        </div>
     </header>
 
 
     <main>
         <h1 class="page-title selected-movie">Selected movie</h1>
-        <h2>Colorful Murakami</h2>
-        <h5>Kumiko Okada, <span class="contry-year">Japan 2020</span></h5>
-        <img src="Images/life1.jpeg" alt="busy steet">
-        <p>Discover the life and work of legendary author Haruki Murakami in this captivating documentary. Gain insights
-            into his unique writing style and the themes that permeate his novels, including alienation, loneliness, and
-            the search for meaning in a chaotic world. With stunning visuals and a thought-provoking narrative, this
-            film is a must-see for anyone interested in literature and the creative arts.</p>
-        <aside class="info-container">
+        <div class="container-movie-info">
+            <h2 class="movie-title">Colorful Murakami</h2>
+            <h5 class="movie-director">Kumiko Okada, <span class="contry-year">Japan 2020</span></h5>
+            <img class="movie-image" src="Images/life1.jpeg" alt="busy steet">
+            <p class="movie-p">Discover the life and work of legendary author Haruki Murakami in this captivating
+                documentary. Gain
+                insights
+                into his unique writing style and the themes that permeate his novels, including alienation, loneliness,
+                and
+                the search for meaning in a chaotic world. With stunning visuals and a thought-provoking narrative, this
+                film is a must-see for anyone interested in literature and the creative arts.</p>
+        </div>
+        <div class="info-container">
             <h6 class="selected-genre">Documentary</h6>
             <h6 class="runtime">96 min</h6>
             <h6 class="language">English</h6>
             <h6 class="age">7+</h6>
-        </aside>
-        <aside class="buy-container">
-            <a href="cart.html">
-                <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <div class="buy-container">
+            <a href="cart.html"><img src="Images/simple-cart.256x230.png" class="cart-icon" href="cart.html">
             </a>
-            <a href="cart.html">
-                <h5 class="text-cart">Add to Cart for 7.99$</h5>
-            </a>
+            <h5 class="text-cart">Add to Cart for 7.99$</h5>
+
             <i class="fa-solid fa-video"></i>
             <h5 class="text-trailer">Play Trailer</h5>
-        </aside>
+        </div>
     </main>
 
 
