@@ -491,8 +491,31 @@ textarea {
 
 }
 
+/* Cart */
 
-/* Payment  */
+.movie-cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e3e8ef58;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #373736;
+    margin-bottom: 2px;
+
+}
+
+
+.cart-image {
+    width: 20%;
+}
+
+.director {
+    font-weight: 300;
+    color: #677489;
+}
+
 
 
 .payment-button {
@@ -502,6 +525,27 @@ textarea {
     font-family: 'Inter', sans-serif;
     letter-spacing: 0.1rem;
     border: #70158F;
-    width: 500px;
+    width: 400px;
     height: 80px;
+
+}
+
+@media (min-width: 460px) {
+    .payment-button {
+        width: 80%;
+        position: relative;
+    }
+
+    .movie-cart {}
+}
+
+
+/* Pay now  */
+
+
+
+
+/* checkbox from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox */
+.payment-method-form {
+    width: 100%;
 }
