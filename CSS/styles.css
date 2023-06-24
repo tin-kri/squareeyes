@@ -95,7 +95,7 @@ nav.nav-head {
     gap: 1rem;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 1180px) {
     .navigation-wrap {
         display: none;
         position: absolute;
@@ -105,16 +105,19 @@ nav.nav-head {
         bottom: 0;
         background-color: #fff;
         padding: 3rem 4rem;
+
     }
 
     .navigation-wrap .nav-menu,
     .navigation-wrap .nav-head {
         display: block;
         position: relative;
+
     }
 
     #menu-checkbox:checked~.navigation-wrap {
         display: block;
+
     }
 
     #menu-checkbox:checked~.hamburger-icon {
@@ -122,10 +125,11 @@ nav.nav-head {
         right: 28px;
         top: 38.5px;
         z-index: 40;
+
     }
 }
 
-@media (min-width: 820px) {
+@media (min-width: 1180px) {
 
     nav {
         display: block;
@@ -134,6 +138,7 @@ nav.nav-head {
 
     nav a {
         display: inline-block;
+
     }
 
     .hamburger-icon {
@@ -167,9 +172,8 @@ h2 {
 }
 
 h3 {
-    /* text-align: center; */
+
     font-family: Inter, sans-serif;
-    ;
     font-size: 1rem;
     font-weight: 400;
 }
@@ -199,22 +203,17 @@ p {
     color: #373736;
 }
 
-
-
-
-
-
-
-
-
-.contry-year {
-    font-weight: lighter;
+a {
+    text-decoration: none;
 }
 
-.text-trailer {
-    color: #7e7d7d;
-    font-weight: lighter;
-}
+
+
+
+
+
+
+/* Explore content */
 
 .genre-horror,
 .genre-lifestories,
@@ -241,14 +240,8 @@ p {
     color: #373736;
 }
 
-.movie-info {
 
-    position: absolute;
-    color: #F9F9F9;
-    bottom: 70px;
-    width: auto;
-    padding: 0px 8px;
-}
+
 
 @media (max-width: 1260px) {
 
@@ -343,12 +336,17 @@ p {
     text-align: center;
 }
 
+.contry-year {
+    font-weight: lighter;
+}
+
+.text-trailer {
+    color: #7e7d7d;
+    font-weight: lighter;
+}
+
 /* contact us */
 .contact-paragraph-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 0% 15% 5%;
 }
 
@@ -410,6 +408,89 @@ textarea {
     width: 300px;
 }
 
+
+
+/* Selected movie */
+
+.movie-image {
+    width: 100%;
+}
+
+.movie-p {
+    padding: 2px;
+}
+
+.movie-image {
+    width: 100%;
+}
+
+.movie-info {
+    display: flex;
+}
+
+.info {
+    flex: 1;
+}
+
+.movie-buy-trailer {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+.buy {
+    flex: 1;
+}
+
+.trailer {
+    flex: 1;
+}
+
+
+@media (min-width: 600px) {
+
+    .movie-about,
+    .movie-summary,
+    .movie-info,
+    .movie-buy-trailer {
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+
+    .movie-title {
+        margin: 0px;
+        font-size: 4rem;
+    }
+
+    .movie-director {
+        font-size: 2rem;
+        margin: 0px 0px 5px;
+    }
+
+    .movie-buy-trailer {
+        flex-direction: row;
+    }
+
+    .movie-image {
+        width: 60%;
+    }
+
+    .info {
+        font-size: 1rem;
+        align-items: center;
+    }
+
+}
+
+
+/* Payment  */
+
+
 .payment-button {
     background-color: #074229;
     color: #F9F9F9;
@@ -419,26 +500,4 @@ textarea {
     border: #70158F;
     width: 500px;
     height: 80px;
-}
-
-/* Selected movie */
-.container-movie-info {
-    display: grid;
-    grid-template-columns: 1fr;
-
-}
-
-.info-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.buy-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.movie-image {
-    width: 70%;
-    ;
 }
