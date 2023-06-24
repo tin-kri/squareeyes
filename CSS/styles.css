@@ -533,7 +533,6 @@ textarea {
 @media (min-width: 460px) {
     .payment-button {
         width: 80%;
-        position: relative;
     }
 }
 
