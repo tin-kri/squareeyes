@@ -106,19 +106,16 @@ nav.nav-head {
         bottom: 0;
         background-color: #fff;
         padding: 3rem 4rem;
-
     }
 
     .navigation-wrap .nav-menu,
     .navigation-wrap .nav-head {
         display: block;
         position: relative;
-
     }
 
     #menu-checkbox:checked~.navigation-wrap {
         display: block;
-
     }
 
     #menu-checkbox:checked~.hamburger-icon {
@@ -126,12 +123,10 @@ nav.nav-head {
         right: 28px;
         top: 38.5px;
         z-index: 40;
-
     }
 }
 
 @media (min-width: 1180px) {
-
     nav {
         display: block;
         position: static;
@@ -157,27 +152,26 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-
 }
 
 footer p {
     margin: 0;
     color: #767676;
     font-size: 14px;
-
 }
 
 .footer-container {
     display: flex;
     flex-direction: column;
-
 }
+
 
 /* Main */
 main {
     margin-bottom:
         100px;
 }
+
 
 /* Global styles */
 
@@ -206,7 +200,6 @@ h2 {
 }
 
 h3 {
-
     font-family: Inter, sans-serif;
     font-size: 1rem;
     font-weight: 400;
@@ -215,7 +208,6 @@ h3 {
 
 h4 {
     font-size: 3rem;
-
 }
 
 h5 {
@@ -241,11 +233,6 @@ p {
 a {
     text-decoration: none;
 }
-
-
-
-
-
 
 
 /* Explore content */
@@ -275,9 +262,6 @@ a {
     color: #373736;
 }
 
-
-
-
 @media (max-width: 1260px) {
 
     .genre-horror,
@@ -293,8 +277,6 @@ a {
     .genre-lifestories,
     .genre-musicdoc {
         grid-template-columns: repeat(2, 1fr);
-
-
     }
 
     .genre {
@@ -303,14 +285,11 @@ a {
 }
 
 
-
 /* Index/Landing page */
 
 .container-movies-frontpage {
     display: flex;
     justify-content: center;
-
-
 }
 
 .container-movies-frontpage img {
@@ -319,7 +298,6 @@ a {
     max-height: 300px;
     object-fit: cover;
 }
-
 
 .intro {
     font-family: 'Inter', sans-serif;
@@ -342,10 +320,7 @@ a {
     padding: 10px;
     text-decoration: none;
     letter-spacing: 2px;
-
 }
-
-
 
 .page-title {
     background-color: #70158F;
@@ -380,6 +355,7 @@ a {
     font-weight: lighter;
 }
 
+
 /* contact us */
 .contact-paragraph-container {
     margin: 0% 15% 5%;
@@ -408,8 +384,6 @@ label {
 
 input,
 textarea {
-    /* To make sure that all text fields have the same font settings
-       By default, textareas have a monospace font (from MDN web forms section)*/
     font: 1em 'Inter', sans-serif;
 
     /* Uniform text field size (from MDN web forms section)*/
@@ -431,8 +405,6 @@ textarea {
     height: 5em;
 }
 
-
-
 .message-button {
     background-color: #70158F;
     color: #F9F9F9;
@@ -440,9 +412,7 @@ textarea {
     font-family: 'Bebas Neue', sans-serif;
     padding: 10px;
     text-decoration: none;
-
 }
-
 
 
 /* Selected movie */
@@ -473,8 +443,6 @@ textarea {
     gap: 10px;
 }
 
-
-
 .trailer {
     flex: 1;
 }
@@ -494,7 +462,6 @@ textarea {
 
 .trailerbutton {
     background-color: #340A42;
-
 }
 
 .cartbutton {
@@ -537,8 +504,8 @@ textarea {
     .movie-p {
         padding-right: 200px;
     }
-
 }
+
 
 /* Cart */
 
@@ -552,9 +519,7 @@ textarea {
     border-radius: 5px;
     border: 1px solid #373736;
     margin-bottom: 2px;
-
 }
-
 
 .cart-image {
     width: 20%;
@@ -564,8 +529,6 @@ textarea {
     font-weight: 300;
     color: #677489;
 }
-
-
 
 .payment-button {
     background-color: #074229;
@@ -577,7 +540,6 @@ textarea {
     width: 400px;
     height: 80px;
     width: 100%;
-
 }
 
 @media (min-width: 460px) {
@@ -585,8 +547,6 @@ textarea {
         width: 80%;
     }
 }
-
-.movie-cart {}
 
 
 /* Pay now  */
@@ -618,7 +578,6 @@ textarea {
     font-family: Inter, sans-serif;
 }
 
-
 .paymentbutton {
     background-color: #074229;
     border-radius: 3px;
@@ -631,7 +590,6 @@ textarea {
     font-weight: 700;
     text-transform: uppercase;
 }
-
 
 @media(min-width:600px) {
     .payment-container {
@@ -648,123 +606,113 @@ textarea {
     .card-container2 {
         flex: 2;
     }
+}
 
 
+/* About us */
 
-    /* About us */
+.title-about {
+    background-color: #074229;
+    padding: 2% 2% 1%;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
 
-    .title-about {
-        background-color: #074229;
-        padding: 2% 2% 1%;
-        text-align: center;
-        margin-bottom: 0px;
-        margin-top: 0px;
-    }
+.eye-catcher {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.large-p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 0px;
+    padding-top: 50px;
+}
+
+.thegang {
+    width: 100%;
+}
+
+.large-p,
+.thegang {
+    flex: 1;
+}
+
+.contactbutton {
+    background-color: #70158F;
+    border-radius: 3px;
+    padding: 3%;
+    align-content: center;
+    text-align: center;
+    color: #e6e5e5;
+    display: block;
+    font-family: Inter, sans-serif;
+    text-transform: uppercase;
+}
+
+.thegang {
+
+    padding-right: 140px;
+    min-width: 290px;
+    align-self: center;
+}
+
+.large-p {
+    font-size: 2rem;
+    padding-left: 140px;
+}
+
+.p1,
+.p2,
+.p3 {
+    font-size: 1rem;
+    padding-left: 10%;
+    padding-right: 20%;
+}
+
+@media(min-width:600px) {
     .eye-catcher {
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .large-p {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin: 0;
-        margin-bottom: 0px;
-        padding-top: 50px;
-    }
-
-    .thegang {
-        width: 100%;
-
-
-    }
-
-    .large-p,
-    .thegang {
-        flex: 1;
-
-    }
-
-
-    .contactbutton {
-        background-color: #70158F;
-        border-radius: 3px;
-        padding: 3%;
-        align-content: center;
-        text-align: center;
-        color: #e6e5e5;
-        display: block;
-        font-family: Inter, sans-serif;
-        text-transform: uppercase;
-
-    }
-
-
-
-    @media(min-width:600px) {
-        .eye-catcher {
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .thegang {
-
-            padding-right: 140px;
-            min-width: 290px;
-            align-self: center;
-        }
-
-        .large-p {
-            font-size: 2rem;
-            padding-left: 140px;
-        }
-
-        .p1,
-        .p2,
-        .p3 {
-            font-size: 1rem;
-            padding-left: 10%;
-            padding-right: 20%;
-        }
-    }
-
-    /* 
-Purchase Confirmation */
-    .error-message {
-        font-family: Inter, sans-serif;
-        color: #340A42;
-        font-size: 1rem;
-        text-transform: capitalize;
-        flex: 1;
-
-    }
-
-
-
-    .back-button {
-        background-color: #074229;
-        border-radius: 3px;
-        padding: 3%;
-        align-content: center;
-        text-align: center;
-        color: #f8f8f8;
-        display: block;
-        font-family: Inter, sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
-
-    .error-container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
-        border: 1px solid #70158F;
-        padding: 10%;
-        margin: 10%;
-        gap: 15px;
     }
+}
+
+
+/* Purchase Confirmation */
+.error-message {
+    font-family: Inter, sans-serif;
+    color: #340A42;
+    font-size: 1rem;
+    text-transform: capitalize;
+    flex: 1;
+}
+
+.back-button {
+    background-color: #074229;
+    border-radius: 3px;
+    padding: 3%;
+    align-content: center;
+    text-align: center;
+    color: #f8f8f8;
+    display: block;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #70158F;
+    padding: 10%;
+    margin: 10%;
+    gap: 15px;
+}
