@@ -660,13 +660,13 @@ textarea {
 .thegang {
 
     padding-right: 0px;
-    min-width: 290px;
+    min-width: 20%;
     align-self: center;
 }
 
 .large-p {
     font-size: 1.5rem;
-    padding-left: 0px;
+    padding-left: 10px;
 }
 
 .p1,
