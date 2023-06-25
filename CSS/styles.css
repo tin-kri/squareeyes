@@ -654,6 +654,7 @@ textarea {
     display: block;
     font-family: Inter, sans-serif;
     text-transform: uppercase;
+    overflow: hidden;
 }
 
 .thegang {
