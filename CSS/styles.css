@@ -161,7 +161,7 @@ footer {
 
 footer p {
     margin: 0;
-    color: #555;
+    color: #767676;
     font-size: 14px;
 
 }
@@ -183,6 +183,7 @@ main {
 body {
     background-color: #F9F9F9;
     color: #373736;
+    margin-left: 0;
 }
 
 h1 {
@@ -430,14 +431,14 @@ textarea {
 
 
 
-.contact-button {
+.message-button {
     background-color: #70158F;
     color: #F9F9F9;
     font-size: 1.5rem;
     font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 0.1rem;
-    border: #70158F;
-    width: 300px;
+    padding: 10px;
+    text-decoration: none;
+
 }
 
 
@@ -467,22 +468,36 @@ textarea {
 .movie-buy-trailer {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
-.button {
-    align-items: center;
-    padding: 10px;
-    margin: 5px;
-}
 
-.buy {
-    flex: 1;
-}
 
 .trailer {
     flex: 1;
 }
 
+.cartbutton,
+.trailerbutton {
+    border-radius: 3px;
+    padding: 3%;
+    align-content: center;
+    text-align: center;
+    color: #e9e9e9;
+    display: block;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.trailerbutton {
+    background-color: #340A42;
+
+}
+
+.cartbutton {
+    background-color: #074229;
+}
 
 @media (min-width: 600px) {
 
@@ -559,6 +574,7 @@ textarea {
     border: #70158F;
     width: 400px;
     height: 80px;
+    width: 100%;
 
 }
 
@@ -572,14 +588,50 @@ textarea {
 
 
 /* Pay now  */
+.title-payment {
+    background-color: #074229;
+    padding: 2% 2% 1%;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.payment-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fa-cc-visa {
+    color: rgb(7, 7, 124);
+}
+
+.fa-paypal {
+    color: rgb(2, 2, 51);
+}
+
+.card-container1,
+.card-container2,
+.card-container3,
+.card-container4 {
+    font-family: Inter, sans-serif;
+}
 
 
+.paymentbutton {
+    background-color: #0BDB84;
+    border-radius: 3px;
+    padding: 3%;
+    align-content: center;
+    text-align: center;
+    color: #e9e9e9;
+    display: block;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
 
+}
 
 /* checkbox from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox */
-.payment-method-form {
-    width: 100%;
-}
 
 
 /* About us */
@@ -660,7 +712,42 @@ textarea {
         padding-left: 10%;
         padding-right: 20%;
     }
+}
+
+/* 
+Purchase Confirmation */
+.error-message {
+    font-family: Inter, sans-serif;
+    color: #340A42;
+    font-size: 1rem;
+    text-transform: capitalize;
+    flex: 1;
+
+}
 
 
 
+.back-button {
+    background-color: #0BDB84;
+    border-radius: 3px;
+    padding: 3%;
+    align-content: center;
+    text-align: center;
+    color: #e9e9e9;
+    display: block;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #70158F;
+    padding: 10%;
+    margin: 10%;
+    gap: 15px;
 }
