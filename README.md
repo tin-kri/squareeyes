@@ -21,3 +21,13 @@ Technologies used in the project:
 
 *   HTML
 *   CSS
+
+
+<h2>Getting Started</h2>
+<h3>Installing</h3>
+Clone the repo: https://github.com/tin-kri/squareeyes
+    
+<h3>Running</h3>
+Clone the repo, open in Vscode. Right click on the index.html and open in Live Server.
+
+
