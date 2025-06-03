@@ -1,0 +1,1 @@
+// Global initialization, shared functions
