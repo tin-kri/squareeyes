@@ -238,9 +238,7 @@ a {
 
 /* Explore content */
 
-.genre-horror,
-.genre-lifestories,
-.genre-musicdoc {
+.genre-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
@@ -249,37 +247,29 @@ a {
     position: relative;
 }
 
-.genre-horror img,
-.genre-lifestories img,
-.genre-musicdoc img {
+
+.genre-container img {
     object-fit: cover;
     height: 220px;
     width: 170px;
     object-position: center;
-}
-
-.genre {
-    font-family: 'Bebas Neue', sans-serif;
-    color: #373736;
+    
 }
 
 @media (max-width: 1260px) {
-
-    .genre-horror,
-    .genre-lifestories,
-    .genre-musicdoc {
-        grid-template-columns: repeat(3, 1fr);
+    .genre-container {
+        grid-template-columns: repeat(6, 1fr);
+        
+    }
+    .genre {
+        text-align: start;
     }
 }
 
 @media (max-width: 630px) {
-
-    .genre-horror,
-    .genre-lifestories,
-    .genre-musicdoc {
+    .genre-container {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .genre {
         text-align: center;
     }
@@ -720,3 +710,23 @@ textarea {
     margin: 10%;
     gap: 15px;
 }
+
+/* //// */
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    color: #340A42;
+}
+
+.error {
+    text-align: center;
+    padding: 40px;
+    color: #d32f2f;
+    font-size: 1.1rem;
+    background-color: #ffebee;
+    margin: 20px;
+    border-radius: 8px;
+}
+

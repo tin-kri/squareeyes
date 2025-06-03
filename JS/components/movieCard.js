@@ -1,1 +1,0 @@
-// Reusable movie card component
