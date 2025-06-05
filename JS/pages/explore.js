@@ -1,4 +1,3 @@
-// explore.js - Controls the explore page functionality
 import { fetchAllMovies } from '../api/movies.js';
 import { SELECTORS } from '../utils/constants.js';
 import { groupByGenre } from '../utils/movieHelpers.js';

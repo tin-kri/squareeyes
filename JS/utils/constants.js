@@ -8,5 +8,5 @@ export const API_CONFIG = {
 
 export const SELECTORS = {
     MOVIES_CONTAINER: '#movies-container',
- 
+    MOVIE_DETAILS_CONTAINER: '.main-movie-selected'
 };
