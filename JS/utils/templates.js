@@ -49,3 +49,25 @@ export const createMovieDetailsPage = (movie) => {
         </div>
     `;
 };
+
+// Landing page work
+export const createMovieListLandingPage = (movies) => {
+    return `
+     
+      <a href="selected-movie.html?id=${movies[0].id}">
+        <img src="${movies[0].image.url}" class="photostill-frontpage" alt="${movies[0].image.alt || movies[0].title}">
+      </a>
+      <a href="selected-movie.html?id=${movies[1].id}">
+        <img src="${movies[1].image.url}" class="photostill-frontpage" alt="${movies[1].image.alt || movies[1].title}">
+      </a>
+      <a href="selected-movie.html?id=${movies[2].id}">
+        <img src="${movies[2].image.url}" class="photostill-frontpage" alt="${movies[2].image.alt || movies[2].title}">
+      </a>
+       <h1 class="intro">Hand-picked independent films from all over the world</h1>
+      <div class="cta-container">
+        <div>
+          <a href="explore.html" class="cta-button">Explore content</a>
+        </div>
+      </div>
+    `;
+  };

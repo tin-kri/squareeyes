@@ -278,8 +278,8 @@ a {
 
 /* Index/Landing page */
 
-.container-movies-frontpage {
-    display: flex;
+/* .container-movies-frontpage {
+    display: grid;
     justify-content: center;
 }
 
@@ -288,7 +288,7 @@ a {
     max-width: 400px;
     max-height: 300px;
     object-fit: cover;
-}
+} */
 
 .intro {
     font-family: 'Inter', sans-serif;
@@ -724,7 +724,7 @@ textarea {
     min-height: 200px;
 }
 
-
+/* Loader Text */
 .loader-text {
     margin-top: 15px;
     font-size: 1.1rem;

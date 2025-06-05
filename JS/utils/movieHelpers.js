@@ -25,3 +25,18 @@ export const getMovieInfo = (movie) => ({
         ? `Discount Price: ${formatPrice(movie.discountedPrice)}`
         : 'Discount Price: N/A'
 });
+
+export const getRandomMovies = (movies, count = 3) => {
+    if (!movies || movies.length === 0) return [];
+    if (movies.length <= count) return movies;
+  
+    const result = [];
+    const availableMovies = [...movies];
+  
+    for (let i = 0; i < count; i++) {
+      const randomIndex = Math.floor(Math.random() * availableMovies.length);
+      result.push(availableMovies[randomIndex]);
+      availableMovies.splice(randomIndex, 1); 
+    }
+    return result;
+  };
