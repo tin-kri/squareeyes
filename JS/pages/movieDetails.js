@@ -5,22 +5,23 @@ import { updateHTML } from '../utils/dom.js';
 import { showLoader } from '../ui/loader.js';
 import { showError } from '../ui/error.js';
 import { createMovieDetailsPage } from '../utils/templates.js';
+import { MESSAGES } from '../utils/messages.js';
 
 export const loadMovieDetails = async () => {
     try {
         const movieId = getMovieIdFromUrl();
         
         if (!movieId) {
-            showError(SELECTORS.MOVIE_DETAILS_CONTAINER, 'No movie ID found in URL. Please select a movie from the explore page.');
+            showError(SELECTORS.MOVIE_DETAILS_CONTAINER, MESSAGES.ERRORS.NO_MOVIE_ID);
             return;
         }
         
-        showLoader(SELECTORS.MOVIE_DETAILS_CONTAINER, 'Loading movie details...');
+        showLoader(SELECTORS.MOVIE_DETAILS_CONTAINER, MESSAGES.LOADING.MOVIE_DETAILS);
         const movie = await fetchMovieById(movieId);
         displayMovie(movie);
         
     } catch (error) {
-        showError(SELECTORS.MOVIE_DETAILS_CONTAINER, 'Sorry, we could not load this movie. Please try again later.');
+        showError(SELECTORS.MOVIE_DETAILS_CONTAINER, MESSAGES.ERRORS.MOVIES_LOAD_FAILED);
     }
 };
 
