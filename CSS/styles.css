@@ -276,36 +276,58 @@ a {
 }
 
 
-/* Index/Landing page */
+/* Landing page */
 
-/* .container-movies-frontpage {
+.container-movies-frontpage {
     display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 0; 
+    margin: 1rem auto;
     justify-content: center;
-}
-
-.container-movies-frontpage img {
+    max-width: 1200px; 
+    
+  }
+  
+  .container-movies-frontpage img {
     min-width: 100px;
     max-width: 400px;
-    max-height: 300px;
+    height: 300px;
     object-fit: cover;
-} */
+    width: 100%; 
+    
+  }
 
-.intro {
+  @media (max-width: 768px) {
+    .container-movies-frontpage img {
+      height: 200px; 
+    }}
+  
+  .container-movies-frontpage .intro {
+    grid-column: 1 / -1; 
+    margin-top: 20px; 
+  }
+  
+  .container-movies-frontpage .cta-container {
+    grid-column: 1 / -1; 
+    margin-top: 20px; 
+  }
+  
+  .intro {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     text-align: center;
     letter-spacing: 0.04rem;
     text-transform: none;
     color: #2a2a2a;
-}
-
-.cta-container {
+  }
+  
+  .cta-container {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-}
-
-.cta-button {
+  }
+  
+  .cta-button {
     background-color: #70158F;
     color: #F9F9F9;
     font-size: 2rem;
@@ -313,8 +335,7 @@ a {
     padding: 10px;
     text-decoration: none;
     letter-spacing: 2px;
-}
-
+  }
 .page-title {
     background-color: #70158F;
     padding: 2% 2% 1%;
