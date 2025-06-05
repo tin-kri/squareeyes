@@ -18,17 +18,3 @@ export const updateImage = (selector, src, alt) => {
     }
 };
 
-export const showElement = (selector) => {
-    const element = getElement(selector);
-    if (element) element.style.display = 'block';
-};
-
-export const hideElement = (selector) => {
-    const element = getElement(selector);
-    if (element) element.style.display = 'none';
-};
-
-export const setOpacity = (selector, opacity) => {
-    const element = getElement(selector);
-    if (element) element.style.opacity = opacity;
-};

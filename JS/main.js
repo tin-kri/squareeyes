@@ -25,3 +25,4 @@ const getCurrentPageName = () => {
 };
 
 document.addEventListener('DOMContentLoaded', initApp);
+

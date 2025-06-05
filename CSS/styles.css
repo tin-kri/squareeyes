@@ -678,13 +678,6 @@ textarea {
 
 
 /* Purchase Confirmation */
-.error-message {
-    font-family: Inter, sans-serif;
-    color: #340A42;
-    font-size: 1rem;
-    text-transform: capitalize;
-    flex: 1;
-}
 
 .view-button {
     background-color: #074229;
@@ -697,6 +690,15 @@ textarea {
     font-family: Inter, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
+}
+/* Errors */
+
+.error-message {
+    font-family: Inter, sans-serif;
+    color: #340A42;
+    font-size: 1rem;
+    text-transform: capitalize;
+    flex: 1;
 }
 
 .error-container {
@@ -711,22 +713,61 @@ textarea {
     gap: 15px;
 }
 
-/* //// */
+/* Loading */
 
-.loading {
-    text-align: center;
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 40px;
-    font-size: 1.2rem;
-    color: #340A42;
+    min-height: 200px;
 }
 
-.error {
-    text-align: center;
-    padding: 40px;
-    color: #d32f2f;
+
+.loader-text {
+    margin-top: 15px;
     font-size: 1.1rem;
-    background-color: #ffebee;
-    margin: 20px;
-    border-radius: 8px;
+    color: #340A42;
+    font-weight: 400;
 }
 
+.loader {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #70158F;
+    color: #70158F;
+    animation: loader 2s linear infinite alternate;
+}
+
+@keyframes loader {
+    0% {
+        box-shadow: 0 0, 0 0, 0 0;
+    }
+    33% {
+        box-shadow: 24px 0px, 24px 0px, 24px 0px;
+    }
+    66% {
+        box-shadow: 24px 24px, 24px 24px, 24px 0px;
+    }
+    100% {
+        box-shadow: 0px 24px, 24px 24px, 24px 0px;
+    }
+}
+
+.hide-loader {
+    display: none;
+}
+      

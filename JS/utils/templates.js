@@ -19,19 +19,28 @@ export const createGenreSection = (genre, movies) => {
     `;
 };
 
-export const createLoadingHTML = (message = 'Loading...') => `
-    <div class="movie-loading">
-        <div class="loading-content">
-            <p>${message}</p>
-        </div>
+export const createMovieDetailsStructure = () => `
+    <h1 class="page-title selected-movie">Selected movie</h1>
+    
+    <section class="movie-about">
+        <h2 class="movie-title"></h2>
+        <h5 class="movie-director"></h5>
+        <img class="movie-image" alt="">
+    </section>
+    
+    <div class="movie-summary">
+        <p class="movie-p"></p>
     </div>
-`;
-
-export const createErrorHTML = (message) => `
-    <div class="movie-error">
-        <div class="error-content">
-            <h3>Oops! Something went wrong</h3>
-            <p>${message}</p>
-        </div>
+    
+    <div class="movie-info">
+        <h6 class="info one"></h6>
+        <h6 class="info two"></h6>
+        <h6 class="info three"></h6>
+        <h6 class="info four"></h6>
+    </div>
+    
+    <div class="movie-buy-trailer">
+        <a class="cartbutton" href="#">Add to Cart</a>
+        <a class="trailerbutton" href="#" style="pointer-events: none; opacity: 0.5;">Play Trailer</a>
     </div>
 `;

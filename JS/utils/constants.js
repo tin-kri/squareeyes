@@ -8,6 +8,5 @@ export const API_CONFIG = {
 
 export const SELECTORS = {
     MOVIES_CONTAINER: '#movies-container',
-    LOADING: '#loading', 
-    ERROR: '#error'
+ 
 };

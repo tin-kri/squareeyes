@@ -1,21 +1,22 @@
+// explore.js - Controls the explore page functionality
 import { fetchAllMovies } from '../api/movies.js';
 import { SELECTORS } from '../utils/constants.js';
 import { groupByGenre } from '../utils/movieHelpers.js';
 import { createGenreSection } from '../utils/templates.js';
-import { updateHTML, showElement, hideElement } from '../utils/dom.js';
+import { updateHTML } from '../utils/dom.js';
+import { showLoader } from '../ui/loader.js';
+import { showError } from '../ui/error.js';
 
-// EXPORTS
 export const loadMovies = async () => {
     try {
-        showLoading();
+        showLoader(SELECTORS.MOVIES_CONTAINER, 'Loading movies...');
         const movies = await fetchAllMovies();
         displayMovies(movies);
     } catch (error) {
-        showError('Sorry, we could not load the movies. Please try again later.');
+        showError(SELECTORS.MOVIES_CONTAINER, 'Sorry, we could not load the movies. Please try again later.');
     }
 };
 
-// INTERNAL FUNCTIONS (not exported)
 const displayMovies = (movies) => {
     const groupedMovies = groupByGenre(movies);
     
@@ -25,21 +26,4 @@ const displayMovies = (movies) => {
     }
     
     updateHTML(SELECTORS.MOVIES_CONTAINER, html);
-    hideLoading();
-};
-
-const showLoading = () => {
-    showElement(SELECTORS.LOADING);
-    hideElement(SELECTORS.ERROR);
-};
-
-const hideLoading = () => hideElement(SELECTORS.LOADING);
-
-const showError = (message) => {
-    hideLoading();
-    const errorElement = document.querySelector(SELECTORS.ERROR);
-    if (errorElement) {
-        errorElement.textContent = message;
-        showElement(SELECTORS.ERROR);
-    }
 };
