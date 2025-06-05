@@ -238,9 +238,7 @@ a {
 
 /* Explore content */
 
-.genre-horror,
-.genre-lifestories,
-.genre-musicdoc {
+.genre-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
@@ -249,73 +247,87 @@ a {
     position: relative;
 }
 
-.genre-horror img,
-.genre-lifestories img,
-.genre-musicdoc img {
+
+.genre-container img {
     object-fit: cover;
     height: 220px;
     width: 170px;
     object-position: center;
-}
-
-.genre {
-    font-family: 'Bebas Neue', sans-serif;
-    color: #373736;
+    
 }
 
 @media (max-width: 1260px) {
-
-    .genre-horror,
-    .genre-lifestories,
-    .genre-musicdoc {
-        grid-template-columns: repeat(3, 1fr);
+    .genre-container {
+        grid-template-columns: repeat(6, 1fr);
+        
+    }
+    .genre {
+        text-align: start;
     }
 }
 
 @media (max-width: 630px) {
-
-    .genre-horror,
-    .genre-lifestories,
-    .genre-musicdoc {
+    .genre-container {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .genre {
         text-align: center;
     }
 }
 
 
-/* Index/Landing page */
+/* Landing page */
 
 .container-movies-frontpage {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 0; 
+    margin: 1rem auto;
     justify-content: center;
-}
-
-.container-movies-frontpage img {
+    max-width: 1200px; 
+    
+  }
+  
+  .container-movies-frontpage img {
     min-width: 100px;
     max-width: 400px;
-    max-height: 300px;
+    height: 300px;
     object-fit: cover;
-}
+    width: 100%; 
+    
+  }
 
-.intro {
+  @media (max-width: 768px) {
+    .container-movies-frontpage img {
+      height: 200px; 
+    }}
+  
+  .container-movies-frontpage .intro {
+    grid-column: 1 / -1; 
+    margin-top: 20px; 
+  }
+  
+  .container-movies-frontpage .cta-container {
+    grid-column: 1 / -1; 
+    margin-top: 20px; 
+  }
+  
+  .intro {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     text-align: center;
     letter-spacing: 0.04rem;
     text-transform: none;
     color: #2a2a2a;
-}
-
-.cta-container {
+  }
+  
+  .cta-container {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-}
-
-.cta-button {
+  }
+  
+  .cta-button {
     background-color: #70158F;
     color: #F9F9F9;
     font-size: 2rem;
@@ -323,8 +335,7 @@ a {
     padding: 10px;
     text-decoration: none;
     letter-spacing: 2px;
-}
-
+  }
 .page-title {
     background-color: #70158F;
     padding: 2% 2% 1%;
@@ -421,16 +432,13 @@ textarea {
 /* Selected movie */
 
 .movie-image {
-    width: 100%;
+    max-width: 400px;
 }
 
 .movie-p {
     padding: 2px;
 }
 
-.movie-image {
-    width: 100%;
-}
 
 .movie-info {
     display: flex;
@@ -688,13 +696,6 @@ textarea {
 
 
 /* Purchase Confirmation */
-.error-message {
-    font-family: Inter, sans-serif;
-    color: #340A42;
-    font-size: 1rem;
-    text-transform: capitalize;
-    flex: 1;
-}
 
 .view-button {
     background-color: #074229;
@@ -708,6 +709,15 @@ textarea {
     font-weight: 700;
     text-transform: uppercase;
 }
+/* Errors */
+
+.error-message {
+    font-family: Inter, sans-serif;
+    color: #340A42;
+    font-size: 1rem;
+    text-transform: capitalize;
+    flex: 1;
+}
 
 .error-container {
     display: flex;
@@ -720,3 +730,62 @@ textarea {
     margin: 10%;
     gap: 15px;
 }
+
+/* Loading */
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    min-height: 200px;
+}
+
+/* Loader Text */
+.loader-text {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #340A42;
+    font-weight: 400;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #70158F;
+    color: #70158F;
+    animation: loader 2s linear infinite alternate;
+}
+
+@keyframes loader {
+    0% {
+        box-shadow: 0 0, 0 0, 0 0;
+    }
+    33% {
+        box-shadow: 24px 0px, 24px 0px, 24px 0px;
+    }
+    66% {
+        box-shadow: 24px 24px, 24px 24px, 24px 0px;
+    }
+    100% {
+        box-shadow: 0px 24px, 24px 24px, 24px 0px;
+    }
+}
+
+.hide-loader {
+    display: none;
+}
+      

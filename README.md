@@ -21,6 +21,7 @@ Technologies used in the project:
 
 *   HTML
 *   CSS
+*   JS
 
 
 <h2>Getting Started</h2>
