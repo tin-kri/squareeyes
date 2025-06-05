@@ -50,7 +50,6 @@ export const createMovieDetailsPage = (movie) => {
     `;
 };
 
-// Landing page work
 export const createMovieListLandingPage = (movies) => {
     return `
      

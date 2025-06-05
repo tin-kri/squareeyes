@@ -5,37 +5,14 @@ export const showError = (containerSelector, message, options = {}) => {
     }
 };
 
-export const showErrorAfter = (afterElementSelector, message, options = {}) => {
-    const element = document.querySelector(afterElementSelector);
-    if (element && !document.querySelector('.error-container')) {
-        element.insertAdjacentHTML('afterend', createErrorHTML(message, options));
-    }
-};
-
-export const clearError = (containerSelector) => {
-    const container = document.querySelector(containerSelector);
-    if (container) {
-        const errorElement = container.querySelector('.error-container');
-        if (errorElement) {
-            errorElement.remove();
-        }
-    }
-};
-
-export const isErrorVisible = (containerSelector) => {
-    const container = document.querySelector(containerSelector);
-    return container && container.querySelector('.error-container') !== null;
-};
-
-const createErrorHTML = (message, options = {}) => {
-    const { title = 'Oops! Something went wrong' } = options;
-    
+const createErrorHTML = (message) => {
     return `
-        <div class="error-container">
-            <div class="error-content">
-                <h3>${title}</h3>
-                <p>${message}</p>
-            </div>
+      <div class="error-container">
+        <div class="error-content">
+          <h3>Oops! Something went wrong</h3>
+          <p>${message}</p>
         </div>
+      </div>
     `;
-};
+  };
+  
