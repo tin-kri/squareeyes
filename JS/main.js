@@ -2,7 +2,6 @@ import { loadMovies } from './pages/explore.js';
 import { loadMovieDetails } from './pages/movieDetails.js';
 import { loadLandingPage } from './pages/landingPage.js';
 
-
 const initApp = () => {
     const currentPage = getCurrentPageName();
     switch (currentPage) {

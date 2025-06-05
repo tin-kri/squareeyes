@@ -17,17 +17,8 @@ export const loadLandingPage = async () => {
     }
 };
 
-//  export const displayLandingPage = (allMovies) => {
-//     const randomMovies = getRandomMovies(allMovies, 3);
-    
-//     const html = createMovieListLandingPage(randomMovies);
-//     updateHTML(SELECTORS.LANDING_CONTAINER, html);
-// };
 export const displayLandingPage = (allMovies) => {
-    console.log('All movies:', allMovies); // Add this
     const randomMovies = getRandomMovies(allMovies, 3);
-    console.log('Random movies:', randomMovies); // Add this
     const html = createMovieListLandingPage(randomMovies);
-    console.log('Generated HTML:', html); // Add this
     updateHTML(SELECTORS.LANDING_CONTAINER, html);
   };

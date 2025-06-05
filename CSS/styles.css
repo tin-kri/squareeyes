@@ -432,16 +432,13 @@ textarea {
 /* Selected movie */
 
 .movie-image {
-    width: 100%;
+    max-width: 400px;
 }
 
 .movie-p {
     padding: 2px;
 }
 
-.movie-image {
-    width: 100%;
-}
 
 .movie-info {
     display: flex;
