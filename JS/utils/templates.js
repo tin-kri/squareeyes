@@ -62,11 +62,6 @@ export const createMovieListLandingPage = (movies) => {
       <a href="selected-movie.html?id=${movies[2].id}">
         <img src="${movies[2].image.url}" class="photostill-frontpage" alt="${movies[2].image.alt || movies[2].title}">
       </a>
-       <h1 class="intro">Hand-picked independent films from all over the world</h1>
-      <div class="cta-container">
-        <div>
-          <a href="explore.html" class="cta-button">Explore content</a>
-        </div>
-      </div>
+       
     `;
   };
