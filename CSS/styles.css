@@ -280,42 +280,117 @@ a {
 
 /* Explore content */
 
+.page-title.explore.content{
+    background-color: #70158f;
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+.genre {
+     font-family: "Bebas Neue", sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: #3a0b4a;
+    margin: 2rem 0 0.75rem;
+   
+}
 .genre-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
-  margin: 2%;
-  padding-bottom: 5%;
-  position: relative;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 1100px;
+  width: calc(100% - 4rem);
+  margin: 0 auto 3rem;
+  box-sizing: border-box;
 }
 
-.genre-container img {
-  object-fit: cover;
-  height: 220px;
-  width: 170px;
-  object-position: center;
+.genre-section {
+    max-width: 1100px;
+    width: calc(100% - 4rem);
+    margin: 0 auto;
 }
 
-@media (max-width: 1260px) {
-  .genre-container {
-    grid-template-columns: repeat(6, 1fr);
-  }
-  .genre {
-    text-align: start;
-  }
+.product {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background: #ffffff;
+    cursor: pointer;   
+    border: 1.5px solid #3a0b4a;
+  box-shadow: 4px 4px 0 #3a0b4a;
+
 }
 
-@media (max-width: 630px) {
-  .genre-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .genre {
-    text-align: center;
-  }
+.product:hover {
+    text-decoration:underline;
 }
 
 
 
+
+
+.product img {
+    width: 100%;
+  aspect-ratio: 2 / 3;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.product-info {
+    padding: 0.6rem 0.25rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+
+.product h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #22052d;
+    padding: 0.6rem 0.75rem 0;
+    margin: 0;
+   
+}
+
+.product-year{
+font-size: 0.95rem;     
+  color: #373736;         
+  padding: 0.3rem 0.75rem;
+}
+
+
+
+@media (max-width: 900px) {
+    .genre-container {
+        grid-template-columns: repeat(3, 1fr);
+        width: calc(100% - 2rem);
+    }
+
+     .genre-section {
+        width: calc(100% - 2rem);
+    }
+}
+
+@media (max-width: 560px) {
+.genre-container {
+        grid-template-columns: repeat(1, 1fr);
+        width: calc(100% - 5rem);
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .genre-section {
+        width: calc(100% - 2rem);
+    }
+
+    .genre {
+        font-size: 1.4rem;
+    }
+}
 
  
 
@@ -470,7 +545,7 @@ a {
 }
  
 
-.page-title {
+/* .page-title {
   background-color: #70158f;
   padding: 2% 2% 1%;
   text-align: center;
@@ -478,7 +553,7 @@ a {
 
 .content {
   background-color: #70158f;
-}
+} */
 
 .title-cart {
   background-color: #340a42;

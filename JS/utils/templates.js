@@ -3,7 +3,11 @@ export const createMovieCard = (movie) => `
     <div class="product">
         <a href="selected-movie.html?id=${movie.id}">
             <img src="${movie.image.url}" alt="${movie.image.alt || movie.title}">
-            <h3>${movie.title}</h3>
+              <div class="product-info">
+                <h3 class="product-title">${movie.title}</h3>
+                <span class="product-year">${movie.released}</span>
+            </div>
+         
         </a>
     </div>
 `;
@@ -11,7 +15,7 @@ export const createMovieCard = (movie) => `
 export const createGenreSection = (genre, movies) => {
     const moviesHTML = movies.map(createMovieCard).join('');
     return `
-        <div>
+        <div class="genre-section">
             <h2 class="genre">${genre}</h2>
         </div>
         <div class="genre-container">
