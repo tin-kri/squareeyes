@@ -32,7 +32,7 @@ export const createMovieDetailsPage = (movie) => {
         
         <section class="movie-about">
             <h2 class="movie-title">${movie.title}</h2>
-            <h5 class="movie-director">Released: ${movie.released}</h5>
+            <h5 class="movie-released">Released: ${movie.released}</h5>
             <img class="movie-image" src="${movie.image.url}" alt="${movie.image.alt || movie.title}">
         </section>
         
