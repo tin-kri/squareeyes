@@ -719,21 +719,182 @@ a {
 
 /* Selected movie */
 
-
-.original-price {
-  text-decoration: line-through;
-  color: #777;
+/* ── Movie details page ── */
+.movie-page-title {
+  background-color: #70158f;
+  padding: 1rem 2rem;
+  text-align: center;
+  margin: 0;
 }
 
-.discount-price {
-  color: #d32f2f;
- 
+.movie-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1100px;
+  width: calc(100% - 4rem);
+  margin: 2rem auto 0;
+  box-sizing: border-box;
+  align-items: start;
+}
+
+
+.movie-details-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #ffffff;
+  border: 1.5px solid #3a0b4a;
+  box-shadow: 4px 4px 0 #3a0b4a;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.movie-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #3a0b4a;
+  margin: 0;
+}
+
+.price-col {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .regular-price {
-  color: #000000;
-  
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #3a0b4a;
 }
+
+.original-price {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.discount-price {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #70158f;
+}
+
+.movie-p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #22052d;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.movie-rating {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #70158f;
+  background: #f4e9f8;
+  border: 1.5px solid #d9b6e5;
+  padding: 0.3rem 0.75rem;
+  align-self: flex-start;
+}
+
+.movie-genre {
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #70158f;
+}
+
+
+.movie-img-col {
+  box-sizing: border-box;
+}
+
+.movie-image {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+  border: 1.5px solid #3a0b4a;
+  box-shadow: 4px 4px 0 #3a0b4a;
+}
+
+
+.movie-actions {
+  display: flex;
+  gap: 1rem;
+  max-width: 1100px;
+  width: calc(100% - 4rem);
+  margin: 2rem auto;
+  box-sizing: border-box;
+}
+
+.cartbutton,
+.trailerbutton {
+  flex: 1;
+  display: block;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding: 0.85rem 1.5rem;
+  text-decoration: none;
+  border: 1.5px solid #3a0b4a;
+  box-shadow: 4px 4px 0 #3a0b4a;
+  box-sizing: border-box;
+  transition:
+    box-shadow 0.1s ease,
+    transform 0.1s ease;
+}
+
+.cartbutton {
+  background-color: #70158f;
+  color: #f4e9f8;
+}
+
+.cartbutton:hover {
+  background-color: #53106a;
+
+ 
+}
+
+.trailerbutton {
+  background-color: #3a0b4a;
+  color: #f4e9f8;
+}
+
+.trailerbutton:hover {
+  background-color: #53106a;
+
+ 
+}
+
+/* ── Responsive ── */
+@media (max-width: 720px) {
+  .movie-grid {
+    grid-template-columns: 1fr;
+    width: calc(100% - 2rem);
+    gap: 1.5rem;
+  }
+
+  .movie-actions {
+    flex-direction: column;
+    width: calc(100% - 2rem);
+  }
+
+  .movie-img-col {
+    order: -1;
+  }
+}
+
 
 /* Cart */
 

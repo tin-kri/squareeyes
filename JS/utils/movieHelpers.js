@@ -21,7 +21,8 @@ export const getDisplayPrice = (movie) =>
   isOnSale(movie) ? movie.discountedPrice : movie.price;
 
 export const getMovieInfo = (movie) => ({
-  rating: `Rating: ★ ${movie.rating}`,
+    genre: `Genre: ${movie.genre}`,
+  rating: `Rating: ${movie.rating}`,
   price: `Price: ${formatPrice(movie.price)}`,
   onSale: `On Sale: ${isOnSale(movie) ? "Yes" : "No"}`,
   discountPrice: isOnSale(movie)
