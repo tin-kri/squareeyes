@@ -720,6 +720,21 @@ a {
 /* Selected movie */
 
 
+.original-price {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.discount-price {
+  color: #d32f2f;
+ 
+}
+
+.regular-price {
+  color: #000000;
+  
+}
+
 /* Cart */
 
 .movie-cart {
