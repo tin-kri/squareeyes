@@ -1,6 +1,7 @@
 import { loadMovies } from "./pages/explore.js";
 import { loadMovieDetails } from "./pages/movieDetails.js";
 import { loadLandingPage } from "./pages/landingPage.js";
+import  formSubmit  from "./components/form.js"
 
 const initApp = () => {
   const currentPage = getCurrentPageName();
@@ -17,6 +18,10 @@ const initApp = () => {
     case "selected-movie":
       loadMovieDetails();
       break;
+      case "contact.html":
+      case "contact":
+      formSubmit();
+      break
   }
 };
 
