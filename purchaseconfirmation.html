@@ -32,24 +32,26 @@
 </head>
 
 <body>
-    <header>
-        <figure>
-            <a href="index.html"><img class="logo" src="Images/squareeyeslogo-nobackground.png" alt="SquareEyes Logo">
-            </a>
-        </figure>
+      <header>
+  <a href="index.html">
+    <img class="logo" src="Images/squareeyeslogo-nobackground.png" alt="SquareEyes Logo">
+</a>
         <input type="checkbox" name="header" id="menu-checkbox">
-        <label for="menu-checkbox" class="hamburger-icon"> <i class="fas fa-bars"></i></label>
+        <label for="menu-checkbox" class="hamburger-icon">
+            <i class="fas fa-bars"></i>
+        </label>
         <div class="navigation-wrap">
-            <nav class="nav-menu">
+            <nav class="nav-menu" aria-label="Navigation">
                 <a href="explore.html">explore content</a>
                 <a href="contact.html">contact us</a>
             </nav>
-            <nav class="nav-head">
-                <a href="cart.html"><img src="Images/simple-cart.256x230.png" class="cart-icon"
-                        alt="Shopping cart icon"></a>
+            <nav class="nav-head" aria-label="Actions">
+                <a href="cart.html">
+                    <img src="Images/simple-cart.256x230.png" class="cart-icon"
+                        alt="Shopping cart icon">
+                    <span class="cart-text">Cart</span></a>
                 <a href="#" class="sign-up">Sign up</a>
-                <a href="#" class="log-in">Log in</a>
-                <input class="search" type="search" placeholder="Search">
+                <a href="#" class="log-in">Sign in</a>
             </nav>
         </div>
     </header>
