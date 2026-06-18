@@ -1,82 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>SquareEyes - Your Cart</title>
-    <meta name="description"
-        content="Customize your viewing experience and easily manage your selections on our convenient cart page. With secure checkout and hassle-free transactions, your cinematic journey is just a few clicks away.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Customize your viewing experience and easily manage your selections on our convenient cart page. With secure checkout and hassle-free transactions, your cinematic journey is just a few clicks away."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/1603b9c209.js" crossorigin="anonymous"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
-    <link rel="manifest" href="Favicon/site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="/CSS/styles.css">
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1603b9c209.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="Favicon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/CSS/styles.css" />
     <!-- Hotjar Tracking Code for squareeyes-id -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:6730769,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 6730769, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
         a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-</head>
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
 
-<body>
-        <header>
-  <a href="index.html">
-    <img class="logo" src="Images/squareeyeslogo-nobackground.png" alt="SquareEyes Logo">
-</a>
-        <input type="checkbox" name="header" id="menu-checkbox">
-        <label for="menu-checkbox" class="hamburger-icon">
-            <i class="fas fa-bars"></i>
-        </label>
-        <div class="navigation-wrap">
-            <nav class="nav-menu" aria-label="Navigation">
-                <a href="explore.html">explore content</a>
-                <a href="contact.html">contact us</a>
-            </nav>
-            <nav class="nav-head" aria-label="Actions">
-                <a href="cart.html">
-                    <img src="Images/simple-cart.256x230.png" class="cart-icon"
-                        alt="Shopping cart icon">
-                    <span class="cart-text">Cart</span></a>
-                <a href="#" class="sign-up">Sign up</a>
-                <a href="#" class="log-in">Sign in</a>
-            </nav>
-        </div>
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          class="logo"
+          src="Images/squareeyeslogo-nobackground.png"
+          alt="SquareEyes Logo"
+        />
+      </a>
+      <input type="checkbox" name="header" id="menu-checkbox" />
+      <label for="menu-checkbox" class="hamburger-icon">
+        <i class="fas fa-bars"></i>
+      </label>
+      <div class="navigation-wrap">
+        <nav class="nav-menu" aria-label="Navigation">
+          <a href="explore.html">explore content</a>
+          <a href="contact.html">contact us</a>
+        </nav>
+        <nav class="nav-head" aria-label="Actions">
+          <a href="cart.html">
+            <img
+              src="Images/simple-cart.256x230.png"
+              class="cart-icon"
+              alt="Shopping cart icon"
+            />
+            <span class="cart-text">Cart</span></a
+          >
+          <a href="#" class="sign-up">Sign up</a>
+          <a href="#" class="log-in">Sign in</a>
+        </nav>
+      </div>
     </header>
-        <main>
-        <h1 class="page-title cart-title">Your Cart</h1>
-        <div id="cart-container"></div>
+    <main>
+      <h1 class="page-title cart-title">Your Cart</h1>
+      <div id="cart-container"></div>
     </main>
 
     <footer class="footer">
-      
-    <div class="footer-container">
-              <hr class="footer-divider">
+      <div class="footer-container">
+        <hr class="footer-divider" />
 
-      <img>
-            <a href="index.html"><img class="footer-logo" src="Images/squareeyeslogo-nobackground.png" alt="SquareEyes Logo">
-            </a>
-          </img>
+        <a href="index.html">
+          <img
+            class="footer-logo"
+            src="Images/squareeyeslogo-nobackground.png"
+            alt="SquareEyes Logo"
+          />
+        </a>
         <ul class="footer-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
-        <p class="copyright-text">&copy; 2026 Noroff Interaction Design Course Assignment</p>
-    </div>
-</footer>
-</body>
-<script type="module" src="/JS/main.js"></script>
+        <p class="copyright-text">
+          &copy; 2026 Noroff Interaction Design Course Assignment
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="/JS/main.js"></script>
+  </body>
 </html>
