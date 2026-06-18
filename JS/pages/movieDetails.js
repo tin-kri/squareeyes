@@ -6,6 +6,7 @@ import { showLoader } from "../ui/loader.js";
 import { showError } from "../ui/error.js";
 import { createMovieDetailsPage } from "../utils/templates.js";
 import { MESSAGES } from "../utils/messages.js";
+import { addToCart } from "../components/cart.js";
 
 export const loadMovieDetails = async () => {
   try {
@@ -32,4 +33,15 @@ const displayMovie = (movie) => {
   document.title = `SquareEyes - ${movie.title}`;
   const html = createMovieDetailsPage(movie);
   updateHTML(SELECTORS.MOVIE_DETAILS_CONTAINER, html);
+  setTimeout(() => setupCartButton(movie), 0);
+};
+
+const setupCartButton = (movie) => {
+    const btn = document.querySelector(".cartbutton");
+    btn.addEventListener("click", () => {
+        addToCart(movie);
+        setTimeout(() => {
+            window.location.href = "cart.html";
+        }, 800);
+    });
 };
