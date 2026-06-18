@@ -2,6 +2,8 @@ import { loadMovies } from "./pages/explore.js";
 import { loadMovieDetails } from "./pages/movieDetails.js";
 import { loadLandingPage } from "./pages/landingPage.js";
 import  formSubmit  from "./components/form.js"
+import { loadCartPage } from "./pages/cartPage.js";
+import { orderSummary, confirmPayment } from "./pages/paymentPage.js";
 
 const initApp = () => {
   const currentPage = getCurrentPageName();
@@ -22,6 +24,14 @@ const initApp = () => {
       case "contact":
       formSubmit();
       break
+    case "cart.html":
+    case "cart":
+    loadCartPage();
+    break
+    case "paynow.html":
+      case "paynow":
+        orderSummary();
+        confirmPayment();
   }
 };
 
