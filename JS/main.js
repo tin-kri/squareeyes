@@ -27,7 +27,10 @@ const initApp = () => {
     case "cart":
     loadCartPage();
     break
-  }
+    case "paynow.html":
+      case "paynow":
+      
+  
 };
 
 const getCurrentPageName = () => {

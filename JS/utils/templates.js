@@ -58,12 +58,43 @@ export const createMovieDetailsPage = (movie) => {
 
         </div>
 
-        <!-- Actions: full width under grid -->
         <div class="movie-actions">
             <button class="cartbutton" type="button" data-id="${movie.id}">
     Add to Cart for ${formatPrice(price)}
 </button>
             <a class="trailerbutton" href="#" >Play Trailer</a>
+        </div>
+    `;
+};
+
+
+// payment
+export const createPaymentPage = () => {
+  const info = getMovieInfo(movie);
+  const price = getDisplayPrice(movie);
+  return `
+       
+
+        <div class="payment-grid">
+
+            <!-- Col: details -->
+            <div class="payment-details-col">
+               
+                <div class="price-col">
+                    ${
+                      movie.onSale && movie.discountedPrice < movie.price
+                        ? `<span class="original-price">${formatPrice(movie.price)}</span>
+                           <span class="discount-price">${formatPrice(movie.discountedPrice)}</span>`
+                        : `<span class="regular-price">${formatPrice(movie.price)}</span>`
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-actions">
+            <button class="cartbutton" type="button" data-id="${movie.id}">
+    Pay Now ${formatPrice(price)}
+</button>
         </div>
     `;
 };

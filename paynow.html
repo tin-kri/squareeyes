@@ -59,37 +59,29 @@
         </div>
         <div class="container">
             <form>
-                <h3>Payment method</h3>
-                <div class="icon-container">
-                    <i class="fa fa-cc-visa"></i>
-                    <i class="fab fa-paypal"></i>
-                </div>
+                <h2>Enter your details</h2>
+            
                 <div class="payment-container">
-                    <div class="card-container1">
+                   <div class="payment-field">
                         <label for="name">Card Holders Name</label>
                         <input type="text" id="name" name="cardname" placeholder="Ex. Dale Cooper">
+                    </div>
+                    <div class="payment-field">
                         <label for="ccnum">Card Number</label>
                         <input type="text" id="ccnum" name="cardnumber" placeholder="Ex. 4555 55 534535 55">
                     </div>
-                    <div class="card-container2">
+                    <div class="payment-field">
                         <label for="expdate">Expiration Date</label>
                         <input type="text" id="expdate" name="expdate" placeholder="Ex. 73923">
-                        <label for="cvc">Expiration Date</label>
+                    </div>
+                    <div class="payment-field">
+                        <label for="cvc">CVC</label>
                         <input type="text" id="cvc" name="cvc" placeholder="Ex. 818">
-                    </div>
-                    <div class="row">
-                        <div class="card-container3">
-                            <label for="expyear">Exp Year</label>
-                            <input type="text" id="expyear" name="expyear" placeholder="2018">
-                        </div>
-                        <div class="card-container4">
-                            <label for="cvv">CVV</label>
-                            <input type="text" id="cvv" name="cvv" placeholder="352">
-                        </div>
-                    </div>
+                   </div>
+            
                 </div>
             </form>
-            <a class="paymentbutton" href="purchaseconfirmation.html">Pay Now</a>
+            <button class="paymentbutton" href="purchaseconfirmation.html">Pay Now</button>
         </div>
     </main>
     <footer class="footer">
