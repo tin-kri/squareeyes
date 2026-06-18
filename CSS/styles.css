@@ -1168,7 +1168,7 @@ a {
 }
 
 .payment-cart-summary {
-  
+
 }
 .paymentbutton {
   display: block;
@@ -1390,7 +1390,7 @@ a {
 /* Purchase Confirmation */
 
 .view-button {
-  background-color: #074229;
+  background-color: #340a42;
   border-radius: 3px;
   padding: 3%;
   align-content: center;
@@ -1401,9 +1401,9 @@ a {
   font-weight: 700;
   text-transform: uppercase;
 }
-/* Errors */
+/* messages */
 
-.error-message {
+.message {
   font-family: Inter, sans-serif;
   color: #340a42;
   font-size: 1rem;
@@ -1411,16 +1411,22 @@ a {
   flex: 1;
 }
 
-.error-container {
+.message-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border: 1px solid #70158f;
+  
   padding: 10%;
   margin: 10%;
   gap: 15px;
+
+
+  border: 1.5px solid #3a0b4a;
+  box-shadow: 4px 4px 0 #3a0b4a;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* Loading */

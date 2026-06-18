@@ -1,23 +1,41 @@
-import { getCart, removeFromCart } from "../components/cart.js";
-import { createPaymentPage } from "../utils/templates.js";
 
-export const loadPaymentPage = () => {
-    const container = document.getElementById("cart-container");
-    if (!container) return;
+    import { getCart, clearCart } from "/JS/components/cart.js";
+    import { formatPrice } from "/JS/utils/movieHelpers.js";
 
-    showPayment();
+    export function orderSummary(){
+    const cart = getCart();
+    const container = document.getElementById("payment-cart-summary");
 
-   
-    container.addEventListener("click", (e) => {
-        if (e.target.classList.contains("cart-remove-btn")) {
-            removeFromCart(e.target.dataset.id);
-            showCart();
-        }
+
+        const total = cart.reduce((sum, movie) => {
+            const price = movie.onSale && movie.discountedPrice < movie.price
+                ? movie.discountedPrice : movie.price;
+            return sum + price;
+        }, 0);
+
+        const items = cart.map(movie => {
+            const price = movie.onSale && movie.discountedPrice < movie.price
+                ? movie.discountedPrice : movie.price;
+            return `<div class="payment-summary-item">
+                <span>${movie.title}</span>
+                <span>${formatPrice(price)}</span>
+            </div>`;
+        }).join("");
+
+        container.innerHTML = `
+            ${items}
+            <div class="payment-summary-total">
+                <span>Total</span>
+                <span>${formatPrice(total)}</span>
+            </div>
+        `;
+    }
+  export function confirmPayment() {
+    const button = document.querySelector(".paymentbutton");
+    if (!button) return;
+
+    button.addEventListener("click", () => {
+        clearCart();
+        window.location.href = "/purchaseconfirmation.html";
     });
-};
-
-function showPayment() {
-    const container = document.getElementById("payment-container");
-    const payment = getPayment();
-    container.innerHTML = createPaymentPage(payment);
 }

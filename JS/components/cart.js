@@ -16,3 +16,8 @@ export function removeFromCart(movieId) {
     const cart = getCart().filter((item) => item.id !== movieId);
     localStorage.setItem("cart", JSON.stringify(cart));
 }
+
+   export function clearCart(){
+    localStorage.removeItem("cart")
+}
+    
