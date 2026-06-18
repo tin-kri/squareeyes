@@ -1,3 +1,14 @@
 {
-    "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "cSpell.words": [
+    "cardname",
+    "cardnumber",
+    "expdate",
+    "Haruki",
+    "hjid",
+    "hjsv",
+    "Hotjar",
+    "Murakami",
+    "squareeyes"
+  ]
 }
