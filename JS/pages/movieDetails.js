@@ -33,12 +33,13 @@ const displayMovie = (movie) => {
   document.title = `SquareEyes - ${movie.title}`;
   const html = createMovieDetailsPage(movie);
   updateHTML(SELECTORS.MOVIE_DETAILS_CONTAINER, html);
-  setTimeout(() => setupCartButton(movie), 0);
+   setupCartButton(movie);
 };
 
 const setupCartButton = (movie) => {
-    const btn = document.querySelector(".cartbutton");
-    btn.addEventListener("click", () => {
+    const button = document.querySelector(".cartbutton");
+    if(!button) return;
+    button.addEventListener("click", () => {
         addToCart(movie);
         setTimeout(() => {
             window.location.href = "cart.html";
