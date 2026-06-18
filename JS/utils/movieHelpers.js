@@ -44,3 +44,6 @@ export const getRandomMovies = (movies, count = 3) => {
   }
   return result;
 };
+
+export const getCartTotal = (cart) =>
+  cart.reduce((sum, movie) => sum + getDisplayPrice(movie), 0);

@@ -1,4 +1,18 @@
-import { getMovieInfo, getDisplayPrice, formatPrice } from "./movieHelpers.js";
+import {
+  getMovieInfo,
+  getDisplayPrice,
+  formatPrice,
+  isOnSale,
+  getCartTotal,
+} from "./movieHelpers.js";
+
+// small shared price-markup helper so the on-sale layout isn't repeated
+const priceMarkup = (movie) =>
+  isOnSale(movie)
+    ? `<span class="original-price">${formatPrice(movie.price)}</span>
+       <span class="discount-price">${formatPrice(movie.discountedPrice)}</span>`
+    : `<span class="regular-price">${formatPrice(getDisplayPrice(movie))}</span>`;
+
 export const createMovieCard = (movie) => `
     <div class="product">
         <a href="selected-movie.html?id=${movie.id}">
@@ -7,7 +21,6 @@ export const createMovieCard = (movie) => `
                 <h3 class="product-title">${movie.title}</h3>
                 <span class="product-year">${movie.released}</span>
             </div>
-         
         </a>
     </div>
 `;
@@ -31,118 +44,59 @@ export const createMovieDetailsPage = (movie) => {
         <h1 class="page-title movie-page-title">${movie.title}</h1>
 
         <div class="movie-grid">
-
             <!-- Col 1: details -->
             <div class="movie-details-col">
                 <h2 class="movie-title">${movie.title} (${movie.released})</h2>
-    <span class="movie-genre">${info.genre}</span>
-                <div class="price-col">
-                    ${
-                      movie.onSale && movie.discountedPrice < movie.price
-                        ? `<span class="original-price">${formatPrice(movie.price)}</span>
-                           <span class="discount-price">${formatPrice(movie.discountedPrice)}</span>`
-                        : `<span class="regular-price">${formatPrice(movie.price)}</span>`
-                    }
-                </div>
+                <span class="movie-genre">${info.genre}</span>
+                <div class="price-col">${priceMarkup(movie)}</div>
 
                 <p class="movie-p">${movie.description}</p>
 
                 <span class="movie-rating">${info.rating}</span>
-            
             </div>
 
             <!-- Col 2: poster -->
             <div class="movie-img-col">
                 <img class="movie-image" src="${movie.image.url}" alt="${movie.image.alt || movie.title}">
             </div>
-
         </div>
 
         <div class="movie-actions">
             <button class="cartbutton" type="button" data-id="${movie.id}">
-    Add to Cart for ${formatPrice(price)}
-</button>
-            <a class="trailerbutton" href="#" >Play Trailer</a>
-        </div>
-    `;
-};
-
-
-// payment
-export const createPaymentPage = () => {
-  const info = getMovieInfo(movie);
-  const price = getDisplayPrice(movie);
-  return `
-       
-
-        <div class="payment-grid">
-
-            <!-- Col: details -->
-            <div class="payment-details-col">
-               
-                <div class="price-col">
-                    ${
-                      movie.onSale && movie.discountedPrice < movie.price
-                        ? `<span class="original-price">${formatPrice(movie.price)}</span>
-                           <span class="discount-price">${formatPrice(movie.discountedPrice)}</span>`
-                        : `<span class="regular-price">${formatPrice(movie.price)}</span>`
-                    }
-                </div>
-            </div>
-        </div>
-
-        <div class="payment-actions">
-            <button class="cartbutton" type="button" data-id="${movie.id}">
-    Pay Now ${formatPrice(price)}
-</button>
+                Add to Cart for ${formatPrice(price)}
+            </button>
+            <a class="trailerbutton" href="#">Play Trailer</a>
         </div>
     `;
 };
 
 export const createMovieListLandingPage = (movies) => {
   return `
-     
       <a href="selected-movie.html?id=${movies[0].id}">
-        <img src="${movies[0].image.url}"  alt="${movies[0].image.alt || movies[0].title}">
+        <img src="${movies[0].image.url}" alt="${movies[0].image.alt || movies[0].title}">
       </a>
       <a href="selected-movie.html?id=${movies[1].id}">
         <img src="${movies[1].image.url}" alt="${movies[1].image.alt || movies[1].title}">
       </a>
       <a href="selected-movie.html?id=${movies[2].id}">
-        <img src="${movies[2].image.url}"  alt="${movies[2].image.alt || movies[2].title}">
+        <img src="${movies[2].image.url}" alt="${movies[2].image.alt || movies[2].title}">
       </a>
-       
     `;
 };
 
-//cart
-export const createCartItem = (movie) => {
-  const price =
-    movie.onSale && movie.discountedPrice < movie.price
-      ? movie.discountedPrice
-      : movie.price;
-
-  return `
-        <div class="cart-item" data-id="${movie.id}">
-            <img class="cart-item-img" src="${movie.image.url}" alt="${movie.image.alt || movie.title}">
-            <div class="cart-item-info">
-                <h3 class="cart-item-title">${movie.title}</h3>
-                <span class="cart-item-year">${movie.released}</span>
-                <div class="cart-item-price">
-                    ${
-                      movie.onSale && movie.discountedPrice < movie.price
-                        ? `<span class="original-price">${formatPrice(movie.price)}</span>
-                           <span class="discount-price">${formatPrice(movie.discountedPrice)}</span>`
-                        : `<span class="regular-price">${formatPrice(price)}</span>`
-                    }
-                </div>
-            </div>
-            <button class="cart-remove-btn" data-id="${movie.id}">Remove</button>
+// cart
+export const createCartItem = (movie) => `
+    <div class="cart-item" data-id="${movie.id}">
+        <img class="cart-item-img" src="${movie.image.url}" alt="${movie.image.alt || movie.title}">
+        <div class="cart-item-info">
+            <h3 class="cart-item-title">${movie.title}</h3>
+            <span class="cart-item-year">${movie.released}</span>
+            <div class="cart-item-price">${priceMarkup(movie)}</div>
         </div>
-    `;
-};
+        <button class="cart-remove-btn" data-id="${movie.id}">Remove</button>
+    </div>
+`;
 
-// Cart page — full layout
 export const createCartPage = (cart) => {
   if (cart.length === 0) {
     return `
@@ -153,14 +107,7 @@ export const createCartPage = (cart) => {
         `;
   }
 
-  const total = cart.reduce((sum, movie) => {
-    const price =
-      movie.onSale && movie.discountedPrice < movie.price
-        ? movie.discountedPrice
-        : movie.price;
-    return sum + price;
-  }, 0);
-
+  const total = getCartTotal(cart);
   const itemsHTML = cart.map(createCartItem).join("");
 
   return `

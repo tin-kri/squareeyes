@@ -1,7 +1,7 @@
-export const showError = (containerSelector, message, options = {}) => {
+export const showError = (containerSelector, message) => {
     const container = document.querySelector(containerSelector);
     if (container) {
-        container.innerHTML = createErrorHTML(message, options);
+        container.innerHTML = createErrorHTML(message);
     }
 };
 
