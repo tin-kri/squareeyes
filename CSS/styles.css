@@ -10,134 +10,155 @@ header {
   margin: 20px;
   align-items: center;
   color: #340a42;
+  position: relative;
+}
+
+.header:hover{
+  color: #70158f;
+
 }
 
 .logo {
   max-width: 200px;
+  display: block;
 }
 
 .cart-icon {
   max-width: 30px;
+  display: block;
 }
 
-.sign-up {
-  background-color: #70158f;
-  color: #f9f9f9;
-  max-height: 25px;
-  padding: 5px 15px;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.log-in {
-  background-color: #f9f9f9;
-  color: #373736;
-  max-height: 25px;
-  padding: 5px 15px;
-  border: solid 1px #70158f;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.sign-up:hover {
-  background-color: #71158fb4;
-}
-
-.log-in:hover {
-  background-color: #e6e5e5;
-}
-
-input.search {
-  height: 35px;
-  border: 1px solid #131313;
-  padding: 2px 1rem 2px 2.5rem;
-  background: transparent url("../Images/search.256x256.png") no-repeat 2px;
-  background-size: 30px;
-  background-color: #f9f9f9;
-  color: #2a2a2a;
-  white-space: nowrap;
-}
-
-.fas {
-  color: #373736;
-}
-
-nav,
-#menu-checkbox {
+.cart-text {
   display: none;
 }
+.cart-text:hover {
+  color: #70158f;
+}
 
-nav {
-  position: absolute;
-  background-color: #f9f9f9;
+
+.log-in {
+    color: #340a42;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1.2px;
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+.sign-up:hover,
+.log-in:hover {
+    color: #70158f;
+}
+.fas {
+  color: #373736;
+  font-size: 1.5rem;
+}
+
+#menu-checkbox {
+  display: none;
 }
 
 .navigation-wrap {
   display: flex;
   flex-grow: 2;
   justify-content: space-between;
+  align-items: center;
 }
 
-nav.nav-head,
-nav.nav-menu {
+nav.nav-menu,
+nav.nav-head {
   display: flex;
   align-items: center;
 }
 
 nav.nav-menu a {
   display: block;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
   white-space: nowrap;
   color: #340a42;
+  text-decoration: none;
+}
+
+nav.nav-menu a:hover {
+  color: #70158f;
 }
 
 nav.nav-head {
   gap: 1rem;
 }
 
+
+.hamburger-icon {
+  display: none;
+}
+
+
 @media (max-width: 1180px) {
-  .navigation-wrap {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: #fff;
-    padding: 3rem 4rem;
+  .hamburger-icon {
+    display: block;
+    cursor: pointer;
+    z-index: 50;
   }
 
-  .navigation-wrap .nav-menu,
-  .navigation-wrap .nav-head {
-    display: block;
-    position: relative;
+  .navigation-wrap {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    padding: 5rem 2rem 2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    z-index: 40;
   }
 
   #menu-checkbox:checked ~ .navigation-wrap {
-    display: block;
+    display: flex;
   }
 
   #menu-checkbox:checked ~ .hamburger-icon {
-    position: absolute;
+    position: fixed;
     right: 28px;
-    top: 38.5px;
-    z-index: 40;
-  }
-}
-
-@media (min-width: 1180px) {
-  nav {
-    display: block;
-    position: static;
+    top: 28px;
+    z-index: 60;
   }
 
-  nav a {
-    display: inline-block;
+  nav.nav-menu,
+  nav.nav-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
   }
 
-  .hamburger-icon {
+  nav.nav-menu a {
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    
+  }
+  .cart-text {
+    display: inline;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    color: #340a42;
+    letter-spacing: 1.2px;
+  }
+  .cart-icon{
     display: none;
   }
+  .sign-up,
+  .log-in {
+    font-size: 2rem;
+    padding: 0.5rem 0;
+  }
+
+ 
 }
 
 /* Global styles */
@@ -195,6 +216,10 @@ h6 {
 p {
   font-size: 1rem;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 h4,
 h5,
@@ -208,10 +233,8 @@ a {
   text-decoration: none;
 }
 
-
-
 /* Shared */
- 
+
 .page-title {
   font-family: "Bebas Neue", sans-serif;
   text-transform: uppercase;
@@ -244,7 +267,9 @@ a {
   border: 1.5px solid #3a0b4a;
   box-shadow: 4px 4px 0 #3a0b4a;
   cursor: pointer;
-  transition: box-shadow 0.1s ease, transform 0.1s ease;
+  transition:
+    box-shadow 0.1s ease,
+    transform 0.1s ease;
 }
 
 .featured-button:hover,
@@ -270,7 +295,9 @@ a {
   border: 1.5px solid #3a0b4a;
   box-shadow: 4px 4px 0 #3a0b4a;
   cursor: pointer;
-  transition: box-shadow 0.1s ease, transform 0.1s ease;
+  transition:
+    box-shadow 0.1s ease,
+    transform 0.1s ease;
 }
 
 .trailerbutton:hover,
@@ -288,7 +315,6 @@ a {
   box-shadow: none;
   transform: none;
 }
-
 
 /* Explore content */
 
@@ -605,7 +631,6 @@ a {
   resize: vertical;
   vertical-align: top;
 }
-
 
 .form-status {
   display: none;
@@ -1056,51 +1081,47 @@ a {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap:1.245rem;
-  
+  gap: 1.245rem;
 }
-.payment-summary-col h2{
-  margin:0;
+.payment-summary-col h2 {
+  margin: 0;
 }
 
-.payment-cart-summary{
-  
+.payment-cart-summary {
 }
 
 .payment-summary-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.6rem 0;
-    font-family: "Inter", sans-serif;
-    font-size: 0.95rem;
-    color: #22052d;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  color: #22052d;
 }
 
 .payment-summary-total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0 0;
-    margin-top: 0.5rem;
-    border-top: 1.5px solid #3a0b4a;
-    font-family: "Inter", sans-serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #3a0b4a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 0;
+  margin-top: 0.5rem;
+  border-top: 1.5px solid #3a0b4a;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3a0b4a;
 }
 @media (max-width: 720px) {
-    .payment-grid {
-        grid-template-columns: 1fr;
-        width: calc(100% - 2rem);
-    }
+  .payment-grid {
+    grid-template-columns: 1fr;
+    width: calc(100% - 2rem);
+  }
 
-    .payment-summary-col {
-        position: static;
-    }
+  .payment-summary-col {
+    position: static;
+  }
 }
-
 
 /* About us */
 
@@ -1232,7 +1253,6 @@ a {
   flex-shrink: 0;
 }
 
-
 @media (max-width: 640px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -1240,7 +1260,6 @@ a {
     margin: 1.25rem auto;
   }
 }
-
 
 .message-stream p {
   display: flex;
