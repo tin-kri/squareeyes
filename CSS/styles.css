@@ -140,9 +140,9 @@ nav.nav-head {
   }
 }
 
-main {
-  flex: 1;
-}
+
+
+
 /* Footer */
 
 .footer {
@@ -225,6 +225,10 @@ body {
   min-height: 100vh;
 }
 
+main {
+  flex: 1;
+}
+
 h1 {
   font-family: "Bebas Neue", sans-serif;
   text-transform: uppercase;
@@ -277,6 +281,25 @@ p {
 a {
   text-decoration: none;
 }
+
+
+
+/* Shared */
+ 
+.page-title {
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  color: #f9f9f9;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  padding: 1rem 2rem;
+  text-align: center;
+  margin: 0;
+  background-color: #70158f;
+}
+/* Buttons */
+
 
 /* Explore content */
 
@@ -383,6 +406,7 @@ a {
 }
 
 /* Landing page */
+
 .featured-banner {
   max-width: 1100px;
   width: calc(100% - 4rem);
@@ -529,37 +553,6 @@ a {
     width: calc(100% - 2rem);
     margin: 1.5rem auto;
   }
-}
-
-/* .page-title {
-  background-color: #70158f;
-  padding: 2% 2% 1%;
-  text-align: center;
-}
-
-.content {
-  background-color: #70158f;
-} */
-
-.title-cart {
-  background-color: #340a42;
-  padding: 2% 2% 1%;
-  text-align: center;
-}
-
-.summary-title {
-  background-color: #0e8f59;
-  padding: 2% 2% 1%;
-  text-align: center;
-}
-
-.contry-year {
-  font-weight: lighter;
-}
-
-.text-trailer {
-  color: #7e7d7d;
-  font-weight: lighter;
 }
 
 /* contact us */
@@ -1135,41 +1128,59 @@ a {
   align-items: start;
 }
 
-.payment-form-col{
+.payment-form-col {
   border: 1.5px solid #3a0b4a;
   box-shadow: 4px 4px 0 #3a0b4a;
-    padding: 2rem;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap:1.245rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.245rem;
 }
 
 .payment-form-col h2 {
-    margin: 0;
-    color: #3a0b4a;
+  margin: 0;
+  color: #3a0b4a;
 }
 
-.payment-form{
+.payment-form {
   display: flex;
   flex-direction: column;
-  gap:1.245rem
+  gap: 1.245rem;
 }
 
 .payment-summary-col {
-    border: 1.5px solid #3a0b4a;
+  border: 1.5px solid #3a0b4a;
   box-shadow: 4px 4px 0 #3a0b4a;
-    padding: 2rem;
-    box-sizing: border-box;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.245rem;
+}
+.payment-summary-item {
     display: flex;
-    flex-direction: column;
-    gap:1.245rem;
-
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0;
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    color: #22052d;
 }
 
-.payment-cart-summary {
-
+.payment-summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 0;
+    margin-top: 0.5rem;
+    border-top: 1.5px solid #3a0b4a;
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #3a0b4a;
 }
+
 .paymentbutton {
   display: block;
   text-align: center;
@@ -1189,23 +1200,6 @@ a {
 
 .paymentbutton:hover {
   background-color: #53106a;
-}
-
-@media (min-width: 600px) {
-  .payment-container {
-    flex-direction: column;
-    gap: 5px;
-
-    padding-bottom: 10%;
-  }
-
-  .card-container1 {
-    flex: 5;
-  }
-
-  .card-container2 {
-    flex: 2;
-  }
 }
 
 /* About us */
@@ -1390,7 +1384,7 @@ a {
 /* Purchase Confirmation */
 
 .view-button {
-    display: inline-block;
+  display: inline-block;
   background-color: #70158f;
   color: #f4e9f8;
   font-family: "Bebas Neue", sans-serif;
@@ -1406,19 +1400,16 @@ a {
   background-color: #53106a;
 }
 
-.message-stream p{
+.message-stream p {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  
   padding: 10%;
   margin: 10%;
   gap: 15px;
- font-family: "Bebas Neue", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   color: #340a42;
-font-size: 2em;
+  font-size: 2em;
   letter-spacing: 1.2px;
   border: 1.5px solid #3a0b4a;
   box-shadow: 4px 4px 0 #3a0b4a;
@@ -1441,18 +1432,16 @@ font-size: 2em;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  
+
   padding: 10%;
   margin: 10%;
   gap: 15px;
-
 
   border: 1.5px solid #3a0b4a;
   box-shadow: 4px 4px 0 #3a0b4a;
   overflow: hidden;
   box-sizing: border-box;
 }
-
 
 /* Loading */
 
