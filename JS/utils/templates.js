@@ -6,7 +6,7 @@ import {
   getCartTotal,
 } from "./movieHelpers.js";
 
-// small shared price-markup helper so the on-sale layout isn't repeated
+
 const priceMarkup = (movie) =>
   isOnSale(movie)
     ? `<span class="original-price">${formatPrice(movie.price)}</span>
