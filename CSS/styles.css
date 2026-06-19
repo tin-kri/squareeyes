@@ -226,6 +226,15 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #340a42;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
 /* Shared */
 
 .page-title {
