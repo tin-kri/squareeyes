@@ -1480,3 +1480,19 @@ textarea:focus-visible {
 .hide-loader {
   display: none;
 }
+
+.skip-link {
+  position: absolute;
+  top: -40px;            
+  left: 8px;
+  z-index: 100;
+  padding: 8px 16px;
+  background: #70158f;   
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 8px;            
+}
