@@ -6,7 +6,6 @@ import {
   getCartTotal,
 } from "./movieHelpers.js";
 
-
 const priceMarkup = (movie) =>
   isOnSale(movie)
     ? `<span class="original-price">${formatPrice(movie.price)}</span>
@@ -20,6 +19,7 @@ export const createMovieCard = (movie) => `
               <div class="product-info">
                 <h3 class="product-title">${movie.title}</h3>
                 <span class="product-year">${movie.released}</span>
+                 <span class="product-price">${priceMarkup(movie)}</span>
             </div>
         </a>
     </div>
@@ -44,7 +44,6 @@ export const createMovieDetailsPage = (movie) => {
         <h1 class="page-title movie-page-title">${movie.title}</h1>
 
         <div class="movie-grid">
-            <!-- Col 1: details -->
             <div class="movie-details-col">
                 <h2 class="movie-title">${movie.title} (${movie.released})</h2>
                 <span class="movie-genre">${info.genre}</span>
@@ -55,7 +54,6 @@ export const createMovieDetailsPage = (movie) => {
                 <span class="movie-rating">${info.rating}</span>
             </div>
 
-            <!-- Col 2: poster -->
             <div class="movie-img-col">
                 <img class="movie-image" src="${movie.image.url}" alt="${movie.image.alt || movie.title}">
             </div>

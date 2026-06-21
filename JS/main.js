@@ -32,6 +32,7 @@ const initApp = () => {
       case "paynow":
         orderSummary();
         confirmPayment();
+        break
   }
 };
 
