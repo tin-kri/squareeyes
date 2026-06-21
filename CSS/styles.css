@@ -393,6 +393,9 @@ textarea:focus-visible {
   color: #373736;
   padding: 0.3rem 0.75rem;
 }
+.product-price{
+   padding: 0.3rem 0.75rem;
+}
 
 @media (max-width: 900px) {
   .genre-container {
