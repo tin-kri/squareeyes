@@ -31,11 +31,17 @@ export function orderSummary() {
 }
 
 export function confirmPayment() {
-  const button = document.querySelector(".paymentbutton");
-  if (!button) return;
+  const form = document.querySelector(".payment-form");
+  
+  if (!form) return;
 
-  button.addEventListener("click", () => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
     clearCart();
-    window.location.href = "/purchaseconfirmation.html";
+    window.location.href = "purchaseconfirmation.html";
   });
 }

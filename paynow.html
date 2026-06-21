@@ -99,13 +99,15 @@
       <div class="payment-grid">
         <div class="payment-form-col">
           <h2>Enter your details</h2>
-          <form class="payment-form">
+          <form class="payment-form" novalidate>
             <div class="form-group">
               <label for="name">Full Name</label>
               <input
                 type="text"
                 id="name"
                 name="cardname"
+                title="Please enter your full name (first and last name)"
+                pattern="^[A-Za-z]+(?:\s+[A-Za-z]+)+$"
                 placeholder="Ex. Dale Cooper"
                 required
               />
@@ -116,6 +118,8 @@
                 type="text"
                 id="ccnum"
                 name="cardnumber"
+                title="Card number must be in format: 1234 5678 9012 3456"
+                pattern="^\d{4}\s\d{4}\s\d{4}\s\d{4}$"
                 placeholder="1234 5678 9012 3456"
                 required
               />
@@ -126,6 +130,8 @@
                 type="text"
                 id="expdate"
                 name="expdate"
+                title="Expiration date must be in format MM/YY"
+                pattern="^(0[1-9]|1[0-2])\/\d{2}$"
                 placeholder="MM/YY"
                 required
               />
@@ -136,6 +142,8 @@
                 type="text"
                 id="cvc"
                 name="cvc"
+                title="CVC must be exactly 3 digits"
+                pattern="^\d{3}$"
                 placeholder="123"
                 required
               />
